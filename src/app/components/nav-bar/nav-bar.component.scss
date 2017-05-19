@@ -1,0 +1,8 @@
+$nav-bar-height: 5.6rem;
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: $nav-bar-height;
+}
