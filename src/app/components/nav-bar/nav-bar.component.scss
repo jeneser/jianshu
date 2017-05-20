@@ -1,8 +1,102 @@
+// Common css
 $nav-bar-height: 5.6rem;
 
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: $nav-bar-height;
+.icon {
+    margin-right: .5rem;
+    font-size: 2rem;
+    line-height: normal;
 }
+
+.btn {
+    display: inline-block;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    margin: .8rem 1.5rem;
+    border-radius: .4rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+//  Main css
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: $nav-bar-height;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: solid .1rem #f0f0f0;
+}
+
+.width-limit {
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    min-width: 76.8rem;
+    max-width: 144rem;
+    height: $nav-bar-height;
+    margin: 0 auto;
+}
+
+.logo {
+    a {
+        display: inline-block;
+        height: $nav-bar-height;
+    }
+
+    img {
+        margin: 1.5rem;
+        width: 5.5rem;
+    }
+}
+
+.collapse {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: $nav-bar-height;
+
+    li {
+        height: $nav-bar-height;
+        margin-right: 1rem;
+    }
+
+    a {
+        display: block;
+        padding: 1.5rem;
+        font-size: 1.7rem;
+        color: #333;
+    }
+
+    .active {
+        color: #ea6f5a;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    color: #969696;
+}
+
+.sign-up {
+    margin-right: 0;
+    width: 8rem;
+    color: #ea6f5a;
+    border: .1rem solid rgba(236,97,73,.7);
+}
+
+.write-btn {
+    width: 10rem;
+    color: #fff;
+    border: .1rem solid #ea6f5a;
+    background-color: #ea6f5a;
+}
+
