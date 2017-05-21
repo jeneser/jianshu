@@ -1,0 +1,26 @@
+@import "../../../theme/variables.scss";
+
+.collection {
+    a{
+        display: inline-block;
+        margin: 0 1.8rem 1.8rem 0;
+        min-height: 3.2rem;
+        color: $dark;
+        background-color: rgba($light, .06);
+        border: .1rem solid rgba($light, .2);
+        border-radius: $btn-default-border-radius;
+        overflow: hidden;
+    }
+
+    img {
+        width: 3.2rem;
+        vertical-align: middle;
+    }
+
+    .name {
+        display: inline-block;
+        padding: 0 1.1rem 0 .6rem;
+        vertical-align: middle;
+        font-size: 1.4rem;
+    }
+}

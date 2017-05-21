@@ -1,11 +1,24 @@
-$limit-min-width: 96rem;
+@import "../../../theme/variables.scss";
 
 .home {
     display: flex;
     justify-content: center;
-    min-width: 76.8rem;
+    min-width: $nav-bar-min-width;
 }
 
 .container {
     margin: 0 2rem;
+}
+
+.index {
+    display: flex;
+    margin: 4rem 0; 
+}
+
+.main {
+    flex: 2;
+}
+
+.aside {
+    flex: 1;
 }
