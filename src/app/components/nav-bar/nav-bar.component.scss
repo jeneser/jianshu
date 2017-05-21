@@ -1,6 +1,6 @@
-// Common css
-$nav-bar-height: 5.6rem;
+@import "../../../theme/variables.scss";
 
+// Common style
 .icon {
     margin-right: .5rem;
     font-size: 2rem;
@@ -9,9 +9,9 @@ $nav-bar-height: 5.6rem;
 
 .btn {
     display: inline-block;
-    height: 3.8rem;
-    line-height: 3.8rem;
-    margin: .8rem 1.5rem;
+    height: $btn-default-height;
+    line-height: $btn-default-height;
+    margin: $btn-default-margin;
     border-radius: .4rem;
     font-size: 1.5rem;
     font-weight: 400;
@@ -20,7 +20,7 @@ $nav-bar-height: 5.6rem;
     cursor: pointer;
 }
 
-//  Main css
+//  Main style
 .nav-bar {
     position: fixed;
     top: 0;
@@ -28,36 +28,39 @@ $nav-bar-height: 5.6rem;
     box-sizing: border-box;
     height: $nav-bar-height;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $white;
     border-bottom: solid .1rem #f0f0f0;
+    z-index: 999;
 }
 
 .width-limit {
     display: flex;
      justify-content: space-between;
     align-items: center;
-    min-width: 76.8rem;
-    max-width: 144rem;
+    min-width: $nav-bar-min-width;
+    max-width: $nav-bar-max-width;
     height: $nav-bar-height;
     margin: 0 auto;
 }
 
 .logo {
+    flex: 1.5;
+
     a {
         display: inline-block;
         height: $nav-bar-height;
     }
 
     img {
-        margin: 1.5rem;
+        margin: $btn-default-margin-left;
         width: 5.5rem;
     }
 }
 
 .collapse {
     display: flex;
+    flex: 6;
     align-items: center;
-    width: 50%;
     height: $nav-bar-height;
 
     li {
@@ -67,13 +70,13 @@ $nav-bar-height: 5.6rem;
 
     a {
         display: block;
-        padding: 1.5rem;
+        padding: $btn-default-padding-left;
         font-size: 1.7rem;
-        color: #333;
+        color: $dark;
     }
 
     .active {
-        color: #ea6f5a;
+        color: $primary;
     }
 }
 
@@ -83,20 +86,20 @@ $nav-bar-height: 5.6rem;
 }
 
 .login {
-    color: #969696;
+    color: $light;
 }
 
 .sign-up {
     margin-right: 0;
     width: 8rem;
-    color: #ea6f5a;
-    border: .1rem solid rgba(236,97,73,.7);
+    color: $primary;
+    border: .1rem solid $primary;
 }
 
 .write-btn {
     width: 10rem;
-    color: #fff;
-    border: .1rem solid #ea6f5a;
-    background-color: #ea6f5a;
+    color: $white;
+    border: .1rem solid $primary;
+    background-color: $primary;
 }
 

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme/variables.scss";
 
+// Reset styles
 html {
   font-size: 62.5%;
 }
@@ -15,4 +17,9 @@ li {
 
 a {
     text-decoration: none;
+}
+
+// global styles
+.has-header {
+  margin-top: $nav-bar-height;
 }
