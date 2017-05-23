@@ -1,24 +1,26 @@
 @import "../../../theme/variables.scss";
 
 .home {
-    display: flex;
-    justify-content: center;
-    min-width: $nav-bar-min-width;
+  display: flex;
+  justify-content: center;
+  min-width: $nav-bar-min-width;
 }
 
 .container {
-    margin: 0 2rem;
+  margin: 0 2rem;
 }
 
 .index {
-    display: flex;
-    margin: 4rem 0; 
+  display: flex;
+  max-width: $limit-min-width;
+  margin: 4rem 0;
 }
 
 .main {
-    flex: 2;
+  flex: 2;
 }
 
 .aside {
-    flex: 1;
+  flex: 1;
+  margin-left: 4%;
 }

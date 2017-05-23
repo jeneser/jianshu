@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CollectionComponent } from './components/collection/collection.component';
+import { BoardComponent } from './components/board/board.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CollectionComponent } from './components/collection/collection.componen
     NavBarComponent,
     HomeComponent,
     CarouselComponent,
-    CollectionComponent
+    CollectionComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,

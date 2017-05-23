@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CarouselComponent } from '../../components/carousel/carousel.component';
 import { CollectionComponent } from '../../components/collection/collection.component';
+import { BoardComponent } from '../../components/board/board.component';
 
 @Component({
   selector: 'app-home',

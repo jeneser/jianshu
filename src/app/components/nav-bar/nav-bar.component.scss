@@ -2,104 +2,103 @@
 
 // Common style
 .icon {
-    margin-right: .5rem;
-    font-size: 2rem;
-    line-height: normal;
+  margin-right: .5rem;
+  font-size: 2rem;
+  line-height: normal;
 }
 
 .btn {
-    display: inline-block;
-    height: $btn-default-height;
-    line-height: $btn-default-height;
-    margin: $btn-default-margin;
-    border-radius: $btn-default-border-radius;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
+  display: inline-block;
+  height: $btn-default-height;
+  line-height: $btn-default-height;
+  margin: $btn-default-margin;
+  border-radius: $btn-default-border-radius;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 //  Main style
 .nav-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    height: $nav-bar-height;
-    overflow: hidden;
-    background-color: $white;
-    border-bottom: solid .1rem #f0f0f0;
-    z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: $nav-bar-height;
+  overflow: hidden;
+  background-color: $white;
+  border-bottom: solid .1rem #f0f0f0;
+  z-index: 999;
 }
 
 .width-limit {
-    display: flex;
-     justify-content: space-between;
-    align-items: center;
-    min-width: $nav-bar-min-width;
-    max-width: $nav-bar-max-width;
-    height: $nav-bar-height;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: $nav-bar-min-width;
+  max-width: $nav-bar-max-width;
+  height: $nav-bar-height;
+  margin: 0 auto;
 }
 
 .logo {
-    flex: 1.5;
+  flex: 1.5;
 
-    a {
-        display: inline-block;
-        height: $nav-bar-height;
-    }
+  a {
+    display: inline-block;
+    height: $nav-bar-height;
+  }
 
-    img {
-        margin: $btn-default-margin-left;
-        width: 5.5rem;
-    }
+  img {
+    margin: $btn-default-margin-left;
+    width: 5.5rem;
+  }
 }
 
 .collapse {
-    display: flex;
-    flex: 6;
-    align-items: center;
+  display: flex;
+  flex: 6;
+  align-items: center;
+  height: $nav-bar-height;
+
+  li {
     height: $nav-bar-height;
+    margin-right: 1rem;
+  }
 
-    li {
-        height: $nav-bar-height;
-        margin-right: 1rem;
-    }
+  a {
+    display: block;
+    padding: $btn-default-padding-left;
+    font-size: 1.7rem;
+    color: $dark;
+  }
 
-    a {
-        display: block;
-        padding: $btn-default-padding-left;
-        font-size: 1.7rem;
-        color: $dark;
-    }
-
-    .active {
-        color: $primary;
-    }
+  .active {
+    color: $primary;
+  }
 }
 
 .search {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .login {
-    color: $light;
+  color: $light;
 }
 
 .sign-up {
-    margin-right: 0;
-    width: 8rem;
-    color: $primary;
-    border: .1rem solid $primary;
+  margin-right: 0;
+  width: 8rem;
+  color: $primary;
+  border: .1rem solid $primary;
 }
 
 .write-btn {
-    width: 10rem;
-    color: $white;
-    border: .1rem solid $primary;
-    background-color: $primary;
+  width: 10rem;
+  color: $white;
+  border: .1rem solid $primary;
+  background-color: $primary;
 }
-

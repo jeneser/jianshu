@@ -1,0 +1,11 @@
+@import "../../../theme/variables.scss";
+
+.board {
+  img {
+    width: 100%;
+    min-height: 4rem;
+    margin-bottom: .6rem;
+    vertical-align: middle;
+    border-radius: $btn-default-border-radius;
+  }
+}

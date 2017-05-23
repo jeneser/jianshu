@@ -1,22 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "./theme/variables.scss";
 
 // Reset styles
 html {
-  font-size: 62.5%;
+  // font-size: 62.5%;
+  font-size: 10px;
 }
 
-ul, li, a, img, h2 {
+ul,
+li,
+a,
+img,
+h2 {
   margin: 0;
   padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 // global styles
