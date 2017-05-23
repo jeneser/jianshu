@@ -10,6 +10,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { BoardComponent } from './components/board/board.component';
+import { DownloadAppComponent } from './components/download-app/download-app.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BoardComponent } from './components/board/board.component';
     HomeComponent,
     CarouselComponent,
     CollectionComponent,
-    BoardComponent
+    BoardComponent,
+    DownloadAppComponent
   ],
   imports: [
     BrowserModule,

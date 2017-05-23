@@ -1,0 +1,50 @@
+@import "../../../theme/variables.scss";
+
+.download-app {
+  position: relative;
+  margin: 1rem 0 3rem 0;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+  }
+
+  .btns {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 1rem;
+    display: flex;
+    padding: .5rem 1rem;
+
+    a {
+      width: 33.33%;
+      padding: 0 1rem;
+      font-size: 1.4rem;
+      color: $white;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    div {
+      padding: .3rem;
+      border-radius: $btn-default-border-radius;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    .code {
+      background-color: rgba($light, .8);
+    }
+
+    .android {
+      background-color: #8bc453;
+    }
+
+    .ios {
+      background-color: #6dacf4;
+    }
+  }
+}
