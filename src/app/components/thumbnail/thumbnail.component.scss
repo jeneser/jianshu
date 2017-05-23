@@ -1,0 +1,107 @@
+@import "../../../theme/variables.scss";
+
+.thumbnail {
+  position: relative;
+  margin: 0 0 1.7rem;
+  padding: 0 .2rem 1.7rem 0;
+  border-bottom: .1rem solid rgba($light, .2);
+  word-wrap: break-word;
+}
+
+.have-img {
+  .content {
+    padding-right: 16rem;
+  }
+}
+
+.wrap-img {
+  position: absolute;
+  top: 50%;
+  margin-top: -6.8rem;
+  right: 0;
+  width: 15rem;
+  height: 12rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: $btn-default-border-radius;
+    vertical-align: middle;
+  }
+}
+
+.content {
+  .author {
+    margin-bottom: 1.4rem;
+    font-size: 1.3rem;
+
+    .avatar {
+      display: inline-block;
+      width: 3.2rem;
+      height: 3.2rem;
+      margin: 0 .5rem 0 0;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+      color: $dark;
+
+      a {
+        color: $dark;
+      }
+    }
+
+    .time {
+      display: inline-block;
+      padding-left: .3rem;
+      color: $light;
+    }
+  }
+
+  .title {
+    display: inherit;
+    margin: -0.7rem 0 .4rem;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $dark;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .abstract {
+    margin: 0 0 .8rem;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: $dark;
+  }
+
+  .meta {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+
+    a {
+      margin-right: 1rem;
+      color: rgba($light, .6);
+    }
+
+    .tag {
+      padding: .2rem .6rem;
+      color: $primary;
+      border: .1rem solid $primary;
+      border-radius: $btn-default-border-radius;
+    }
+  }
+}

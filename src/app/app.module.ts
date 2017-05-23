@@ -11,6 +11,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { CollectionComponent } from './components/collection/collection.component';
 import { BoardComponent } from './components/board/board.component';
 import { DownloadAppComponent } from './components/download-app/download-app.component';
+import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
+import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DownloadAppComponent } from './components/download-app/download-app.com
     CarouselComponent,
     CollectionComponent,
     BoardComponent,
-    DownloadAppComponent
+    DownloadAppComponent,
+    ThumbnailComponent,
+    PlaceholderComponent
   ],
   imports: [
     BrowserModule,
