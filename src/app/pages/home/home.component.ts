@@ -8,6 +8,7 @@ import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.compone
 import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
 import { AvatarComponent } from '../../components/avatar/avatar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { SideToolComponent } from '../../components/side-tool/side-tool.component';
 
 @Component({
   selector: 'app-home',

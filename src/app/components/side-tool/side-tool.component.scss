@@ -1,0 +1,28 @@
+@import "../../../theme/variables.scss";
+
+.side-tool {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 998;
+
+  li {
+    width: 5rem;
+    height: 5rem;
+    line-height: 2rem;
+    background-color: $white;
+    border: .1rem solid rgba($light, .25);
+  }
+
+  a {
+    text-align: center;
+    display: block;
+    color: $dark;
+  }
+
+  i {
+    display: block;
+    padding-top: 1.6rem;
+    font-size: 2rem;
+  }
+}
