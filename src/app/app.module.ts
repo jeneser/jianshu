@@ -14,6 +14,8 @@ import { DownloadAppComponent } from './components/download-app/download-app.com
 import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
+import { SideToolComponent } from './components/side-tool/side-tool.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AvatarComponent } from './components/avatar/avatar.component';
     DownloadAppComponent,
     ThumbnailComponent,
     PlaceholderComponent,
-    AvatarComponent
+    AvatarComponent,
+    SideToolComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

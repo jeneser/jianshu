@@ -1,0 +1,35 @@
+@import "../../../theme/variables.scss";
+
+.footer {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: $light;
+
+  a {
+    display: inline-block;
+    color: $light;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  .icp {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: rgba($light, .5);
+
+    a {
+      color: rgba($light, .5);
+
+      &:hover {
+        color: $dark;
+      }
+    }
+
+    img {
+      display: block;
+      width: 6rem;
+    }
+  }
+}

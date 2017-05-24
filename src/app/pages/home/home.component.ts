@@ -7,6 +7,7 @@ import { DownloadAppComponent } from '../../components/download-app/download-app
 import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
 import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
 import { AvatarComponent } from '../../components/avatar/avatar.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
