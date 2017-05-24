@@ -6,6 +6,7 @@ import { BoardComponent } from '../../components/board/board.component';
 import { DownloadAppComponent } from '../../components/download-app/download-app.component';
 import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
 import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
+import { AvatarComponent } from '../../components/avatar/avatar.component';
 
 @Component({
   selector: 'app-home',

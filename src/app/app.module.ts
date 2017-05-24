@@ -13,6 +13,7 @@ import { BoardComponent } from './components/board/board.component';
 import { DownloadAppComponent } from './components/download-app/download-app.component';
 import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { PlaceholderComponent } from './components/placeholder/placeholder.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlaceholderComponent } from './components/placeholder/placeholder.compo
     BoardComponent,
     DownloadAppComponent,
     ThumbnailComponent,
-    PlaceholderComponent
+    PlaceholderComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
