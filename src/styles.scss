@@ -8,11 +8,7 @@ html {
   font-size: 10px;
 }
 
-ul,
-li,
-a,
-img,
-h2 {
+ul, li, a, img, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -28,4 +24,12 @@ a {
 // global styles
 .has-header {
   margin-top: $nav-bar-height;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.2rem;
 }

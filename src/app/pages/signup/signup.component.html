@@ -1,3 +1,54 @@
-<p>
-  signup works!
-</p>
+<div class="signup">
+  <div class="logo">
+    <a href="/"><img src="assets/images/logo_jianshu.png" alt="Logo"></a>
+  </div>
+  <div class="main">
+    <h4 class="title">
+      <a class="" href="/sign_in">登录</a>
+      <b>·</b>
+      <a class="active" href="/sign_up">注册</a>
+    </h4>
+    <div class="container">
+      <form class="new-user" action="" method="post">
+        <div class="input-elem no-bottom">
+          <input type="text" value="" name="nickName" id="nickName" placeholder="你的昵称">
+          <i class="iconfont ic-user"></i>
+        </div>
+        <div class="input-elem no-bottom">
+          <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="手机号">
+          <i class="iconfont ic-phonenumber"></i>
+        </div>
+        <div class="input-elem">
+          <input type="password" name="passWord" id="passWord" placeholder="设置密码">
+          <i class="iconfont ic-password"></i>
+        </div>
+        <input type="submit" name="commit" value="注册" class="submit">
+        <p class="msg">
+          点击 “注册” 即表示您同意并愿意遵守简书<br>
+          <a target="_blank" href="/">用户协议</a> 和
+          <a target="_blank" href="/">隐私政策</a> 。
+        </p>
+      </form>
+      <div class="more-sign">
+        <h6>社交帐号直接注册</h6>
+        <ul>
+          <li>
+            <a class="weibo" href="/users/auth/weibo">
+              <i class="iconfont ic-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin" href="/users/auth/wechat">
+              <i class="iconfont ic-wechat"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq" href="/users/auth/qq_connect">
+              <i class="iconfont ic-qq_connect"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
