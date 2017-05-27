@@ -12,6 +12,15 @@ $dark: #333333;
 $white: #ffffff;
 $transparent: rgba(0, 0 , 0, 0);
 
+// Font
+$h1-font-size: 3.6rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.4rem;
+$h4-font-size: 1.8rem;
+$h5-font-size: 1.4rem;
+$h6-font-size: 1.2rem;
+$default-font-size: 1.3rem;
+
 // Nav
 $nav-bar-height: 5.6rem;
 $nav-bar-min-width: 76.8rem;
@@ -26,3 +35,13 @@ $btn-default-margin-left: 1.5rem;
 $btn-default-padding-left: 1.5rem;
 $btn-default-margin: .8rem $btn-default-margin-left;
 $btn-default-border-radius: .4rem;
+$btn-default-font-size: 1.5rem;
+
+// Card
+$card-box-shadow: 0 0 .8rem rgba(0,0,0,.1);
+
+// Avatar
+$avatar-font-size: 1.3rem;
+
+// Icon
+$icon-font-size: 2rem;

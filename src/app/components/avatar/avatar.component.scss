@@ -1,7 +1,9 @@
-@import "../../../theme/variables.scss";
+@import "../../../theme/variables";
+@import "../../../theme/utilities/_mixin";
+@import "../../../theme/utilities/_placeholder";
 
 .avatar {
-  position: relative;
+  @include position(relative);
   display: flex;
   line-height: 2rem;
   margin-top: 1.5rem;
@@ -13,10 +15,7 @@
   margin-right: 1rem;
 
   img {
-    width: 100%;
-    height: 100%;
-    border: .1rem solid rgba($light, .2);
-    border-radius: 50%;
+    @extend %border-radius-img;
   }
 }
 
@@ -24,24 +23,22 @@
   .name {
     display: block;
     padding-top: .5rem;
-    font-size: 1.3rem;
+    font-size: $avatar-font-size;
     font-weight: 700;
     color: $dark;
   }
 
   p {
     margin-top: .2rem;
-    font-size: 1.2rem;
+    font-size: $h6-font-size;
     color: $light;
   }
 }
 
 .follow {
-  position: absolute;
-  right: 0;
+  @include position(absolute, $right: 0);
   margin-top: .5rem;
-  padding: 0;
-  font-size: 1.2rem;
+  font-size: $h6-font-size;
   font-weight: 400;
-  color: #42c02e;
+  color: $secondary;
 }

@@ -1,25 +1,20 @@
-@import "../../../theme/variables.scss";
-
-.hide {
-  display: none;
-}
+@import "../../../theme/variables";
+@import "../../../theme/utilities/_mixin";
 
 .signup {
   height: 100%;
-  min-height: 750px;
+  min-height: $nav-bar-min-width;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: $h5-font-size;
   background-color: rgba($light, .1);
 }
 
 .logo {
-  position: absolute;
-  top: 5.6rem;
+  @include position(absolute, $top: 5.6rem);
   margin-left: 5rem;
 
   img {
     width: 10rem;
-    vertical-align: middle;
   }
 }
 
@@ -30,7 +25,7 @@
   padding: 5rem 5rem 3rem;
   background-color: $white;
   border-radius: $btn-default-border-radius;
-  box-shadow: 0 0 .8rem rgba(0,0,0,.1);
+  box-shadow: $card-box-shadow;
   box-sizing: border-box;
 }
 
@@ -60,22 +55,12 @@
 .container {
   form {
     margin-bottom: 3rem;
-
-    div:nth-child(1) {
-      input {
-        border-radius: $btn-default-border-radius $btn-default-border-radius 0 0;
-      }
-    }
-
-    div:nth-child(3) {
-      input {
-        border-radius: 0 0 $btn-default-border-radius $btn-default-border-radius;
-      }
-    }
+    @include form-border-radius("div", "1", "top");
+    @include form-border-radius("div", "3", "bottom");
   }
 
   .input-elem {
-    position: relative;
+    @include position(relative);
     width: 100%;
 
     input {
@@ -93,10 +78,8 @@
     }
 
     i {
-      position: absolute;
-      top: 1.4rem;
-      left: 1rem;
-      font-size: 1.8rem;
+      @include position(absolute, $top: 1.4rem, $left: 1rem);
+      font-size: $h4-font-size;
       color: $light;
     }
   }
@@ -112,7 +95,7 @@
     width: 100%;
     margin-top: 2rem;
     padding: .9rem 1.8rem;
-    font-size: 1.8rem;
+    font-size: $h4-font-size;
     color: $white;
     background: $secondary;
     border: none;
@@ -125,7 +108,7 @@
     padding: 0;
     line-height: 2rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: $h6-font-size;
     color: $light;
 
     a {
@@ -138,17 +121,16 @@
   margin-top: 3rem;
 
   h6 {
-    position: relative;
+    @include position(relative);
     margin: 0 0 2rem;
     line-height: 1.1;
     color: #b5b5b5;
 
     &::before, &::after {
       content: "";
-      position: absolute;
       display: block;
+      @include position(absolute, $top: .5rem);
       width: 6rem;
-      top: .5rem;
       border-top: .1rem solid #b5b5b5;
     }
 
@@ -179,7 +161,7 @@
     }
 
     i {
-      font-size: 2.4rem;
+      font-size: $h3-font-size;
       color: $white;
     }
 

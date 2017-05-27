@@ -1,7 +1,8 @@
-@import "../../../theme/variables.scss";
+@import "../../../theme/variables";
+@import "../../../theme/utilities/_mixin";
 
 .download-app {
-  position: relative;
+  @include position(relative);
   margin: 1rem 0 3rem 0;
   box-sizing: border-box;
 
@@ -10,9 +11,7 @@
   }
 
   .btns {
-    position: absolute;
-    right: 0;
-    left: 0;
+    @include position(absolute, $left: 0, $right: 0);
     bottom: 1rem;
     display: flex;
     padding: .5rem;
@@ -20,7 +19,7 @@
     a {
       width: 33.33%;
       padding: 0 1rem;
-      font-size: 1.4rem;
+      font-size: $h5-font-size;
       color: $white;
       text-align: center;
       line-height: 3rem;

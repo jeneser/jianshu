@@ -1,4 +1,5 @@
 @import "../../../theme/variables.scss";
+@import "../../../theme/utilities/_mixin";
 
 @keyframes loading {
   0% {
@@ -29,14 +30,12 @@
 }
 
 .placeholder {
-  position: relative;
+  @include position(relative);
   padding: 0 .2rem 0 0;
   margin-bottom: 5rem;
 
   .img {
-    position: absolute;
-    bottom: 2.3rem;
-    right: 0;
+    @include position(absolute, $bottom: 2.3rem, $right: 0);
     width: 15rem;
     height: 12rem;
     border-radius: $btn-default-border-radius;
@@ -51,21 +50,21 @@
     }
 
     .avatar {
+      display: inline-block;
       width: 3.4rem;
       height: 3.4rem;
       margin: 0 .5rem 0 0;
+      vertical-align: middle;
       border-radius: 100%;
       background-color: rgba($light, .23);
-      display: inline-block;
-      vertical-align: middle;
     }
 
     .name {
+      display: inline-block;
       width: 20%;
       height: 1.6rem;
-      background-color: rgba($light, .23);
-      display: inline-block;
       vertical-align: middle;
+      background-color: rgba($light, .23);
     }
 
     .title {
@@ -93,7 +92,7 @@
     }
 
     .meta {
-      font-size: 1.2rem;
+      font-size: $h6-font-size;
       color: rgba($light, .23);
 
       i {

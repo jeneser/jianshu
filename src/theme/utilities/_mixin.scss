@@ -1,0 +1,27 @@
+@import "../variables";
+
+// Reset form input border radius
+@mixin form-border-radius($elem, $nth, $dir) {
+  #{$elem}:nth-child(#{$nth}) {
+    input {
+      @if $dir == top {
+        border-radius: $btn-default-border-radius $btn-default-border-radius 0 0;
+      } @else if $dir == bottom {
+        border-radius: 0 0 $btn-default-border-radius $btn-default-border-radius;
+      }
+    }
+  }
+}
+
+// Position
+@mixin position($position, $top: null, $left: null, $right: null, $bottom: null) {
+  $list: (top: $top, left: $left, right: $right, bottom: $bottom);
+
+  position: $position;
+
+  @each $k, $v in $list {
+    @if $v != null {
+      #{$k}:$v;
+    }
+  }
+}
