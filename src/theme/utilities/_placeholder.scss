@@ -1,5 +1,6 @@
 @import "../variables";
 
+// Img
 %responsive-img {
   width: 100%;
   height: 100%;
@@ -13,4 +14,18 @@
 %border-radius-img {
   @extend %radius-img;
   border: .1rem solid rgba($light, .2);
+}
+
+// Button
+%default-button {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.2rem 1.8rem;
+  font-size: $h4-font-size;
+  color: $white;
+  background: $primary;
+  border: none;
+  outline: none;
+  border-radius: $btn-default-border-radius;
 }

@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren: 'app/pages/signup/signup.module#SignupModule'
   },
   {
+    path: 'signin',
+    loadChildren: 'app/pages/signin/signin.module#SigninModule'
+  },
+  {
     path: 'pages',
     component: PagesComponent,
     children: [

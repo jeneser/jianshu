@@ -13,26 +13,31 @@
     <div class="container">
       <form class="new-user" action="" method="post">
         <div class="input-elem restyle">
-          <input type="text" value="" name="nickName" id="nickName" placeholder="你的昵称">
+          <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="手机号或邮箱">
           <i class="iconfont ic-user"></i>
-        </div>
-        <div class="input-elem restyle">
-          <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="手机号">
-          <i class="iconfont ic-phonenumber"></i>
         </div>
         <div class="input-elem">
           <input type="password" name="passWord" id="passWord" placeholder="设置密码">
           <i class="iconfont ic-password"></i>
         </div>
-        <input type="submit" name="commit" value="注册" class="submit">
-        <p class="msg">
-          点击 “注册” 即表示您同意并愿意遵守简书<br>
-          <a target="_blank" href="/">用户协议</a> 和
-          <a target="_blank" href="/">隐私政策</a> 。
-        </p>
+        <!--TODO: Add geetest-->
+        <div class="remember">
+          <input type="checkbox" value="true" checked="checked" name="remember">
+          <span>记住我</span>
+        </div>
+        <div class="forget">
+          <a class="" href="">登录遇到问题?</a>
+          <ul class="dropdown-menu hide">
+            <li><a href="/">用手机号重置密码</a></li>
+            <li><a href="/">用邮箱重置密码</a></li>
+            <li><a href="/">无法用海外手机号登录</a></li>
+            <li><a href="/">无法用 Google 帐号登录</a></li>
+          </ul>
+        </div>
+        <input type="submit" name="commit" value="登录" class="submit">
       </form>
       <div class="more-sign">
-        <h6>社交帐号直接注册</h6>
+        <h6>社交帐号登录</h6>
         <ul>
           <li>
             <a class="weibo" href="/users/auth/weibo">
@@ -47,6 +52,11 @@
           <li>
             <a class="qq" href="/users/auth/qq_connect">
               <i class="iconfont ic-qq_connect"></i>
+            </a>
+          </li>
+          <li>
+            <a class="other" href="#">
+              <i class="iconfont ic-more"></i>
             </a>
           </li>
         </ul>

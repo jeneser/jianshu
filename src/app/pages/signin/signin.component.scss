@@ -57,7 +57,7 @@
   form {
     margin-bottom: 3rem;
     @include form-border-radius("div", "1", "top");
-    @include form-border-radius("div", "3", "bottom");
+    @include form-border-radius("div", "2", "bottom");
   }
 
   .input-elem {
@@ -93,19 +93,24 @@
 
   .submit {
     @extend %default-button;
-    background: $secondary;
+    background: $balanced;
   }
 
-  .msg {
-    margin: 1rem 0;
-    padding: 0;
-    line-height: 2rem;
-    text-align: center;
-    font-size: $h6-font-size;
-    color: $light;
+  .remember {
+    float: left;
+    margin: 1.5rem 0;
+  }
+
+  .forget {
+    float: right;
+    margin: 1.5rem 0;
 
     a {
-      color: $balanced;
+      color: $light;
+
+      &:hover {
+        color: $dark;
+      }
     }
   }
 }
@@ -168,6 +173,13 @@
 
     .qq {
       background-color: $balanced;
+    }
+
+    .other {
+      background-color: rgba($light, .2);
+      i {
+        color: $light;
+      }
     }
   }
 }
