@@ -24,6 +24,10 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: 'app/pages/home/home.module#HomeModule'
+      },
+      {
+        path: 'p/:id',
+        loadChildren: 'app/pages/note/note.module#NoteModule'
       }
     ]
   }

@@ -1,0 +1,75 @@
+@import "../../../theme/variables";
+@import "../../../theme/utilities/_placeholder";
+
+.post {
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  width: $post-limit-width;
+
+  .title {
+    font-size: $h1-font-size;
+  }
+
+  .author {
+    margin: 3rem 0 4rem;
+  }
+
+  .article {
+    .content {
+      p {
+        margin: 0 0 $p-margin-bottom;
+        line-height: $p-line-height;
+        font-size: $p-font-size;
+        font-weight: $p-font-weight;
+        color: $black;
+        word-break: break-word;
+      }
+
+      .image-package {
+        width: 100%;
+        margin-bottom: $p-margin-bottom;
+
+        img {
+          @extend %responsive-img;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      margin: 4rem 0 3rem;
+
+      span, i {
+        font-size: $h6-font-size;
+        color: rgba($dark, .5);
+      }
+
+      .copyright {
+        .report {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .follow-detail {
+    padding: 2rem;
+    background-color: rgba($light, .05);
+    border: .1rem solid #e1e1e1;
+    border-radius: $btn-default-border-radius;
+    font-size: $h6-font-size;
+
+    .signature {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: .1rem solid #e1e1e1;
+      color: $light;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

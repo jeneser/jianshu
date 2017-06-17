@@ -17,6 +17,10 @@ $headings: (
   }
 }
 
+body {
+  min-width: $nav-bar-min-width;
+}
+
 .has-header {
   margin-top: $nav-bar-height;
 }
