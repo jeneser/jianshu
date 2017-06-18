@@ -7,38 +7,78 @@
   display: flex;
   line-height: 2rem;
   margin-top: 1.5rem;
-}
 
-.avatar-img {
-  width: 4.8rem;
-  height: 4.8rem;
-  margin-right: 1rem;
-
-  img {
-    @extend %border-radius-img;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
-.meta {
-  .name {
-    display: block;
+// 穿透宿主元素，设置插入元素样式
+:host /deep/ {
+  a.avatar {
+    margin-right: 1rem;
+    width: 4.8rem;
+    height: 4.8rem;
+
+    img {
+      @extend %border-radius-img;
+    }
+  }
+
+  .tag {
+    margin-right: .6rem;
+    padding: .1rem .2rem;
+    font-size: $h6-font-size;
+    color: $primary;
+    border: .1rem solid $primary;
+    border-radius: .3rem;
+  }
+
+  a.name {
+    display: inline-block;
+    margin-right: .6rem;
     padding-top: .5rem;
-    font-size: $avatar-font-size;
-    font-weight: 700;
+    font-size: $avatar-default-font-size;
     color: $dark;
   }
 
-  p {
+  .follow {
+    display: inline-block;
+    padding: 0 .7rem 0 .5rem;
+    text-align: center;
+    font-size: $h6-font-size;
+    color: $white;
+    background-color: $secondary;
+    border-radius: 4rem;
+  }
+
+  .meta {
     margin-top: .2rem;
     font-size: $h6-font-size;
     color: $light;
   }
 }
 
-.follow {
-  @include position(absolute, $right: 0);
-  margin-top: .5rem;
-  font-size: $h6-font-size;
-  font-weight: 400;
-  color: $secondary;
+:host(.article-author), :host(.author-detail) {
+  .name {
+    a.name {
+      font-size: $avatar-name-font-size;
+    }
+  }
+}
+
+:host(.author-detail) /deep/ {
+  .follow {
+    @include position(absolute, $right: 0);
+    padding: 1rem 0;
+    width: 10rem;
+    font-size: $avatar-name-font-size;
+  }
+
+  .ic-man {
+    color: $balanced;
+    font-size: $avatar-name-font-size;
+  }
 }

@@ -1,27 +1,6 @@
 @import "../../../theme/variables";
 @import "../../../theme/utilities/_mixin";
 
-// Common style
-.icon {
-  margin-right: .5rem;
-  font-size: $icon-font-size;
-  line-height: normal;
-}
-
-.btn {
-  display: inline-block;
-  height: $btn-default-height;
-  line-height: $btn-default-height;
-  margin: $btn-default-margin;
-  border-radius: $btn-default-border-radius;
-  font-size: $btn-default-font-size;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-//  Main style
 .nav-bar {
   @include position(fixed, $top: 0);
   width: 100%;
