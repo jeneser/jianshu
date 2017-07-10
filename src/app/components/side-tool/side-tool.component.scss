@@ -1,5 +1,5 @@
-@import "../../../theme/variables.scss";
-@import "../../../theme/utilities/_mixin";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
 
 .side-tool {
   @include position(fixed, $bottom: 4rem, $right: 4rem);
@@ -9,7 +9,7 @@
     width: 5rem;
     height: 5rem;
     line-height: 2rem;
-    background-color: $white;
+    background-color: $background-color;
     border: .1rem solid rgba($light, .25);
   }
 

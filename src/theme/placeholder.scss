@@ -1,4 +1,4 @@
-@import "../variables";
+@import "./theme";
 
 // Img
 %responsive-img {
@@ -23,7 +23,7 @@
   margin-top: 2rem;
   padding: 1.2rem 1.8rem;
   font-size: $h4-font-size;
-  color: $white;
+  color: $background-color;
   background: $primary;
   border: none;
   outline: none;

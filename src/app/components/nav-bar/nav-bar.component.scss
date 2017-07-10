@@ -1,5 +1,5 @@
-@import "../../../theme/variables";
-@import "../../../theme/utilities/_mixin";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
 
 .nav-bar {
   @include position(fixed, $top: 0);
@@ -7,7 +7,7 @@
   box-sizing: border-box;
   height: $nav-bar-height;
   overflow: hidden;
-  background-color: $white;
+  background-color: $background-color;
   border-bottom: solid .1rem #f0f0f0;
   z-index: 999;
 }
@@ -77,7 +77,7 @@
 
 .write-btn {
   width: 10rem;
-  color: $white;
+  color: $background-color;
   border: .1rem solid $primary;
   background-color: $primary;
 }

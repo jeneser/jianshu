@@ -1,6 +1,6 @@
-@import "../../../theme/variables";
-@import "../../../theme/utilities/_mixin";
-@import "../../../theme/utilities/_placeholder";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
+@import "../../../theme/placeholder";
 
 .avatar {
   @include position(relative);
@@ -15,7 +15,7 @@
   }
 }
 
-// 穿透宿主元素，设置插入元素样式
+// Penetrates the host element and sets the insertion element style
 :host /deep/ {
   a.avatar {
     margin-right: 1rem;
@@ -40,7 +40,7 @@
     display: inline-block;
     margin-right: .6rem;
     padding-top: .5rem;
-    font-size: $avatar-default-font-size;
+    font-size: $font-size-base;
     color: $dark;
   }
 
@@ -49,7 +49,7 @@
     padding: 0 .7rem 0 .5rem;
     text-align: center;
     font-size: $h6-font-size;
-    color: $white;
+    color: $background-color;
     background-color: $secondary;
     border-radius: 4rem;
   }

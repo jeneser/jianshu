@@ -1,6 +1,6 @@
-@import "../../../theme/variables";
-@import "../../../theme/utilities/_mixin";
-@import "../../../theme/utilities/_placeholder";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
+@import "../../../theme/placeholder";
 
 .signup {
   height: 100%;
@@ -24,7 +24,7 @@
   width: 40rem;
   margin: 6rem auto 0;
   padding: 5rem 5rem 3rem;
-  background-color: $white;
+  background-color: $background-color;
   border-radius: $btn-default-border-radius;
   box-shadow: $card-box-shadow;
   box-sizing: border-box;
@@ -155,7 +155,7 @@
 
     i {
       font-size: $h3-font-size;
-      color: $white;
+      color: $background-color;
     }
 
     .weibo {

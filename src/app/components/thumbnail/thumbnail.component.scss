@@ -1,6 +1,6 @@
-@import "../../../theme/variables.scss";
-@import "../../../theme/utilities/_mixin";
-@import "../../../theme/utilities/_placeholder";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
+@import "../../../theme/placeholder";
 
 .thumbnail {
   @include position(relative);
@@ -32,7 +32,7 @@
 .content {
   .author {
     margin-bottom: 1.4rem;
-    font-size: $avatar-default-font-size;
+    font-size: $font-size-base;
 
     .avatar {
       display: inline-block;
@@ -79,7 +79,7 @@
 
   .abstract {
     margin: 0 0 .8rem;
-    font-size: $default-font-size;
+    font-size: $font-size-base;
     line-height: 2.4rem;
     color: $dark;
   }

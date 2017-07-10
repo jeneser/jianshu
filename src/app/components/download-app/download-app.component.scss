@@ -1,5 +1,5 @@
-@import "../../../theme/variables";
-@import "../../../theme/utilities/_mixin";
+@import "../../../theme/theme";
+@import "../../../theme/mixin";
 
 .download-app {
   @include position(relative);
@@ -20,7 +20,7 @@
       width: 33.33%;
       padding: 0 1rem;
       font-size: $h5-font-size;
-      color: $white;
+      color: $background-color;
       text-align: center;
       line-height: 3rem;
     }
