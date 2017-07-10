@@ -1,30 +1,54 @@
-# Jianshu
+<p align="center">
+	<img src="logo.png">
+</p>
 
->Angular restructure jianshu
+<p align="center">
+	<b>Refactoring Jianshu with Angular</b>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
+<p align="center">
+	<a href="https://travis-ci.org/jeneser/jianshu"><img src="https://travis-ci.org/jeneser/jianshu.svg?branch=master"></a>
+	<a href="https://github.com/jeneser/jianshu/blob/master/package.json"><img src="https://img.shields.io/david/expressjs/express.svg?style=flat-square"></a>
+	<a href="https://www.codacy.com/app/jeneser/jianshu?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jeneser/jianshu&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/d7f2c222f41c4e9c8f4511d71dd51232"/></a>
+	<a href=""><img src="https://img.shields.io/badge/Powered%20by-Angular-brightgreen.svg"></a>
+	<a href="http://isitmaintained.com/project/jeneser/jianshu"><img src="http://isitmaintained.com/badge/open/jeneser/jianshu.svg"></a>
+	<a href="http://isitmaintained.com/project/jeneser/jianshu"><img src="http://isitmaintained.com/badge/resolution/jeneser/jianshu.svg"></a>
+	<a href="https://github.com/jeneser/jianshu/pulls"><img src="https://img.shields.io/badge/PR-welcome-brightgreen.svg"></a>
+	<a href="https://github.com/jeneser/jianshu/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"></a>
+</p>
 
-## Development server
+<br>
+<p align="center">
+	<img src="screenshot.gif">
+	<br><br>
+	<strong>......</strong>
+	<br>
+	<strong><a href="">Live Demo</a></strong>
+</p>
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Build Setup
 
-## Code scaffolding
+``` bash
+# install dependencies
+npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+# serve with hot reload at localhost:4200
+ng serve
 
-## Build
+# build for production
+ng build --prod
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
 
-## Running unit tests
+For detailed explanation on how things work, checkout the [docs for angular-cli](https://github.com/angular/angular-cli).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Change log
 
-## Running end-to-end tests
+- July 10, 2017:
+  - Refactoring theme and style
+  - Update README
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT](https://github.com/jeneser/JIANSHU/blob/master/LICENSE) Copyright (c) 2017 Jeneser
