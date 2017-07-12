@@ -23,6 +23,10 @@ $headings: (
 // App Structure
 // --------------------------------------------------
 
+* {
+  box-sizing: border-box;
+}
+
 // All font sizes use rem units
 // By default, 1rem equals 10px. For example, 1.4rem  === 14px
 // $font-size-root value, which is on the <html> element
@@ -33,6 +37,8 @@ html {
 }
 
 body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
   min-width: $nav-bar-min-width;
 }
 
@@ -52,7 +58,6 @@ body {
 
 .btn {
   display: inline-block;
-  height: $btn-default-height;
   line-height: $btn-default-height;
   margin: $btn-default-margin;
   border-radius: $btn-default-border-radius;

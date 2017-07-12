@@ -1,8 +1,9 @@
 <div class="note has-header">
+  <!-- Post -->
   <div class="post">
     <div class="article">
       <h1 class="title">你的自律，正在慢慢逼疯你</h1>
-      <!-- 作者区域 -->
+      <!-- Author -->
       <div class="author">
         <app-avatar class="article-author">
           <span class="tag">作者</span>
@@ -11,9 +12,9 @@
           </a>
           <a class="name" routerLink="/" target="_blank">刘淼</a>
         </app-avatar>
-        <!-- 如果是当前作者，加入编辑按钮 -->
+        <!-- If it is the current author, add edit button -->
       </div>
-      <!-- 文章内容 -->
+      <!-- Content -->
       <div class="content">
         <div class="rich_media_content">
           <div class="image-package">
@@ -57,7 +58,7 @@
           <p>自律其实就是这么简单，一点都不洋气时尚高大上，不是只有人中龙凤才能做到，也不是一定要每一个小时都满满当当，活成机器也还挺没意思的。没必要为了自律而焦虑，吃好睡好，人生最重要的就是开心。</p>
         </div>
       </div>
-
+      <!-- Foot -->
       <div class="foot">
         <a class="notebook" href="">
           <i class="iconfont ic-search-notebook"></i>
@@ -71,7 +72,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Detail author -->
     <div class="follow-detail">
       <div class="info">
         <app-avatar class="author-detail">
@@ -84,7 +85,76 @@
       </div>
       <div class="signature">官方专题【人物】主编。微信公众号：一棵花白(yikehuabai)</div>
     </div>
+    <!-- Support author -->
+    <div class="support-author">
+      <p>最近打算存点私房钱，吃点高端的SHA VILLA沙县小吃这样的餐厅</p>
+      <div class="btn btn-pay">赞赏支持</div>
+      <div class="supporter">
+        <ul class="support-list">
+          <li>
+            <a href="javascript:void(0)" class="avatar">
+              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="avatar">
+              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="avatar">
+              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Meta bottom -->
+    <div class="meta-bottom">
+      <!-- Like -->
+      <div class="like">
+        <div class="btn like-group">
+          <div class="btn-like">
+            <a href="/signin"><i class="iconfont ic-like"></i>喜欢</a>
+          </div>
+          <div class="modal-wrap">
+            <a>97</a>
+          </div>
+        </div>
+      </div>
+      <!-- Share group -->
+      <div class="share-group">
+        <a class="share-circle">
+          <i class="iconfont ic-wechat"></i>
+        </a>
+        <a class="share-circle">
+          <i class="iconfont ic-weibo"></i>
+        </a>
+        <a class="share-circle">
+          <i class="iconfont ic-picture"></i>
+        </a>
+        <a class="share-circle more-share">更多分享</a>
+      </div>
 
+    </div>
+
+  </div>
+  <!-- Bottom -->
+  <div class="note-bottom">
+    <div class="main">
+      <div class="meta">
+        <p class="title">被以下专题收入，发现更多相似内容</p>
+      </div>
+      <app-collection></app-collection>
+    </div>
+    <div class="recommend-note">
+      <div class="meta">
+        <p class="title">更多精彩内容</p>
+      </div>
+      <app-thumbnail></app-thumbnail>
+      <app-thumbnail></app-thumbnail>
+      <app-thumbnail></app-thumbnail>
+    </div>
   </div>
   <app-side-tool></app-side-tool>
 </div>

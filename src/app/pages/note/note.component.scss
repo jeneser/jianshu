@@ -1,6 +1,7 @@
 @import "../../../theme/theme";
 @import "../../../theme/placeholder";
 
+// Post
 .post {
   margin: 0 auto;
   padding-top: 2rem;
@@ -71,5 +72,169 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+  }
+
+  .support-author {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    border-bottom: .1rem solid #f0f0f0;
+
+    p {
+      padding: 0 3rem;
+      margin-bottom: 2rem;
+      min-height: 2.4rem;
+      font-size: 1.7rem;
+    }
+
+    .btn-pay {
+      margin-bottom: 2rem;
+      padding: 0 2.5rem;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: $primary;
+    }
+
+    .support-list {
+      display: inline-block;
+      height: 5rem;
+
+      li {
+        display: inline-block;
+        margin: 0 -0.5rem;
+
+        .avatar {
+          display: block;
+          width: 4rem;
+          height: 4rem;
+          cursor: pointer;
+        }
+
+        img {
+          @extend %radius-img;
+          border: .3rem solid #fff;
+        }
+      }
+    }
+  }
+
+  .meta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    .like {
+      .like-group {
+        padding: 1.3rem 0 1.5rem;
+        line-height: normal;
+        border: .1rem solid $primary;
+        border-radius: 4rem;
+
+        .btn-like {
+          display: inline-block;
+          font-size: 1.9rem;
+
+          a {
+            padding: 1.8rem 1.5rem 1.8rem 3rem;
+            color: $primary;
+            cursor: pointer;
+          }
+        }
+
+        .modal-wrap {
+          display: inline-block;
+          font-size: $h4-font-size;
+          border-left: .1rem solid $primary;
+
+          a {
+            padding: 1.8rem 3rem 1.8rem 1.7rem;
+            color: $primary;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .like-group:hover {
+        background-color: rgba($primary, .05);
+      }
+    }
+
+    .share-group {
+      margin-top: .6rem;
+
+      .share-circle {
+        display: inline-block;
+        width: 5rem;
+        height: 5rem;
+        margin-left: .5rem;
+        text-align: center;
+        border: .1rem solid #dcdcdc;
+        border-radius: 50%;
+        vertical-align: middle;
+        cursor: pointer;
+
+        i {
+          margin-top: 1rem;
+          font-size: 2.4rem;
+          line-height: 2;
+        }
+
+        .ic-wechat {
+          color: $secondary;
+        }
+
+        .ic-weibo {
+          color: $primary;
+        }
+
+        .ic-picture {
+          color: $balanced;
+        }
+      }
+
+      .share-circle:hover {
+        background-color: hsla(0,0%,71%,.1);
+      }
+
+      .more-share {
+        width: auto;
+        padding: .4rem 1.8rem;
+        font-size: 1.4rem;
+        color: #9b9b9b;
+        line-height: 4rem;
+        border-radius: 5rem;
+      }
+    }
+
+
+
+  }
+}
+
+// Bottom
+.note-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 21.3rem;
+  background-color: #f5f5f5;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .meta {
+    .title {
+      font-size: 1.5rem;
+      padding-bottom: 1.5rem;
+      color: #a0a0a0;
+    }
+  }
+
+  .main {
+    width: $post-limit-width;
+    padding: 0 0 3rem;
+  }
+
+  .recommend-note {
+    width: $post-limit-width;
   }
 }

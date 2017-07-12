@@ -5,6 +5,8 @@ import { NoteRoutingModule } from './note-routing.module';
 
 import { NoteComponent } from './note.component';
 import { AvatarComponent } from '../../components/avatar/avatar.component';
+import { CollectionComponent } from '../../components/collection/collection.component';
+import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
 import { SideToolComponent } from '../../components/side-tool/side-tool.component';
 
 @NgModule({
@@ -15,6 +17,8 @@ import { SideToolComponent } from '../../components/side-tool/side-tool.componen
   declarations: [
     NoteComponent,
     AvatarComponent,
+    CollectionComponent,
+    ThumbnailComponent,
     SideToolComponent
   ]
 })
