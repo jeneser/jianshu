@@ -28,6 +28,10 @@ const routes: Routes = [
       {
         path: 'p/:id',
         loadChildren: 'app/pages/note/note.module#NoteModule'
+      },
+      {
+        path: 'c/:id',
+        loadChildren: 'app/pages/collection/collection.module#CollectionModule'
       }
     ]
   }
