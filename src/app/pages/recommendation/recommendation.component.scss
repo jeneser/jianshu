@@ -1,0 +1,34 @@
+@import "../../../theme/theme";
+@import "../../../theme/placeholder";
+
+.recommendation {
+  display: flex;
+  justify-content: center;
+  min-width: $nav-bar-min-width;
+
+}
+
+.container {
+  display: flex;
+  margin: 0 2rem;
+  max-width: $limit-min-width;
+  margin-top: 3rem;
+}
+
+.main {
+  flex: 2;
+
+  .main-top {
+    .banner {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 3rem;
+      border-radius: .6rem;
+    }
+  }
+}
+
+.aside {
+  flex: 1;
+  margin-left: 4%;
+}
