@@ -87,4 +87,93 @@
 .aside {
   flex: 1;
   margin-left: 4%;
+
+  .title {
+    margin-bottom: 1rem;
+    font-size: $h5-font-size;
+    color: #969696;
+  }
+
+  .description {
+    margin-bottom: 20px;
+    padding: 0 0 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+
+    p {
+      margin: 0 0 1rem;
+      color: #333;
+    }
+
+    .open {
+      color: #969696;
+      cursor: pointer;
+    }
+  }
+
+  .share-group {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid #f0f0f0;
+    line-height: 3rem;
+
+    span {
+      font-size: $h5-font-size;
+      vertical-align: middle;
+    }
+
+    a {
+      margin-left: 1rem;
+      color: #333;
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 2.2rem;
+      vertical-align: middle;
+    }
+  }
+
+  .collection-editor {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid #f0f0f0;
+  }
+
+  .collection-follower {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid #f0f0f0;
+
+    li {
+      margin: 0 -0.8rem;
+
+      .avatar {
+        display: block;
+        width: 3.2rem;
+        height: 3.2rem;
+        cursor: pointer;
+      }
+
+      img {
+        @extend %radius-img;
+        border: .3rem solid #fff;
+      }
+
+      .others {
+        margin-left: .3rem;
+        border: .3rem solid #fff;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        color: #999;
+        text-align: center;
+        line-height: 2;
+      }
+    }
+  }
+
+
 }
