@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: 'app/pages/signin/signin.module#SigninModule'
   },
   {
-    path: 'pages',
+    path: '',
     component: PagesComponent,
     children: [
       {
@@ -22,16 +22,20 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'home',
+        path: 'home', // home
         loadChildren: 'app/pages/home/home.module#HomeModule'
       },
       {
-        path: 'p/:id',
+        path: 'p/:id',  // note
         loadChildren: 'app/pages/note/note.module#NoteModule'
       },
       {
-        path: 'c/:id',
+        path: 'c/:id',  // collection
         loadChildren: 'app/pages/collection/collection.module#CollectionModule'
+      },
+      {
+        path: 'r/:id',  // recommendation
+        loadChildren: 'app/pages/recommendation/recommendation.module#RecommendationModule'
       }
     ]
   }
