@@ -34,7 +34,7 @@ const routes: Routes = [
         loadChildren: 'app/pages/collection/collection.module#CollectionModule'
       },
       {
-        path: 'r/:id',  // recommendation
+        path: 'r',  // recommendation
         loadChildren: 'app/pages/recommendation/recommendation.module#RecommendationModule'
       }
     ]

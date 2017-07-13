@@ -1,0 +1,21 @@
+@import "../../../../theme/theme";
+
+.collection {
+  display: flex;
+  justify-content: center;
+  min-width: $nav-bar-min-width;
+}
+
+.container {
+  display: flex;
+  margin: 0 2rem;
+  max-width: $limit-min-width;
+  margin-top: 3rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0,0%,71%,.2);
+    border-radius: .6rem;
+  }
+}

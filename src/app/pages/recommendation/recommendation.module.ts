@@ -6,6 +6,7 @@ import { RecommendationComponent } from './recommendation.component';
 import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
 import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
 import { AvatarComponent } from '../../components/avatar/avatar.component';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { AvatarComponent } from '../../components/avatar/avatar.component';
     RecommendationComponent,
     ThumbnailComponent,
     PlaceholderComponent,
-    AvatarComponent
+    AvatarComponent,
+    CollectionComponent
   ]
 })
 export class RecommendationModule { }
