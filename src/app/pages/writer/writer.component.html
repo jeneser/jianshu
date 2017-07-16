@@ -61,9 +61,153 @@
     </div>
   </div>
   <div class="middle">
-    middle
+    <div class="notes-list">
+      <div class="new-note">
+        <a class="new-note-link" href="javascript:void(0)">
+          <i class="icon fa fa-plus-circle"></i><span>新建文章</span>
+        </a>
+      </div>
+      <div class="notes">
+        <li class="note active">
+          <i class="icon icon-note note-icon shared"></i>
+          <p class="abbreviate">作者：[Joshua Bemenderfer](https://alligator.io/info/#joshua_bem</p>
+          <p class="wordage">字数: 733</p>
+          <a href="javascript:void(0)" class="note-link title">Vue.js路由懒加载[译]</a>
+          <a href="javascript:void(0)" class="share-note">
+            <i class="fa fa-gear"></i>
+          </a>
+          <ul class="dropdown-menu arrow-top">
+            <li>
+              <b><i class="fa fa-check"></i>已发布</b>
+            </li>
+            <li class="dropdown-submenu pull-left">
+              <a href="#">
+                <i class="fa fa-share"></i>分享到
+              </a>
+              <ul class="dropdown-menu share-to-social-network">
+                <li>
+                  <a href="javascript:void(null)">
+                    <img src="">
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="分享到腾讯微博">
+                    <img src="">
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="分享到QQ空间">
+                    <img src="">
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="fa fa-lock"></i>设为私密
+              </a>
+            </li>
+            <li>
+              <a href="http://www.jianshu.com/p/abb02075b56b" target="_blank">
+                <i class="fa fa-external-link"></i>在新窗口打开
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="fa fa-folder-open"></i>移动文章
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="fa fa-clock-o"></i>历史版本
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="fa fa-trash-o"></i>删除文章
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="note">
+          <i class="icon icon-note note-icon shared"></i>
+          <p class="abbreviate">作者：[Joshua Bemenderfer](https://alligator.io/info/#joshua_bem</p>
+          <p class="wordage">字数: 733</p>
+          <a href="javascript:void(0)" class="note-link title">Vue.js路由懒加载[译]</a>
+        </li>
+        <li class="note">
+          <i class="icon icon-note note-icon shared"></i>
+          <p class="abbreviate">作者：[Joshua Bemenderfer](https://alligator.io/info/#joshua_bem</p>
+          <p class="wordage">字数: 733</p>
+          <a href="javascript:void(0)" class="note-link title">Vue.js路由懒加载[译]</a>
+        </li>
+      </div>
+      <div class="new-note new-note-bottom">
+        <a class="new-note-link" href="javascript:void(0)">
+          <i class="fa fa-plus"></i><span>在下方新建文章</span>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="main">
-    main
+    <form class="note-form markdown" onsubmit="return false;">
+      <input class="title mousetrap" name="note_name" type="text" id="note_title" value="Vue.js路由懒加载[译]">
+      <ul class="toolbar">
+        <li>
+          <a href="javascript:void(0)">
+            <i class="fa fa-picture-o"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(null)">
+            <i class="fa fa-undo"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(null)">
+            <i class="fa fa-repeat"></i>
+          </a>
+        </li>
+        <li class="pull-right publish-button-item">
+          <a href="javascript:void(null)" id="publish-button">
+            <i class="fa fa-check"></i>已发布
+          </a>
+        </li>
+        <li class="pull-right">
+          <a href="javascript:void(null)">
+            <i class="fa fa-expand"></i>
+          </a>
+        </li>
+        <li class="pull-right">
+          <a href="javascript:void(null)">
+            <i class="fa fa-columns"></i>
+          </a>
+        </li>
+        <li class="pull-right">
+          <a href="javascript:void(null)">
+            <i class="fa fa-floppy-o"></i>
+          </a>
+        </li>
+        <li class="history-btn">
+          <a href="javascript:void(null)">
+            <i class="fa fa-clock-o"></i>
+          </a>
+        </li>
+        <span class="saving-notice"></span>
+      </ul>
+      <textarea class="text mousetrap" name="note_content">
+        当你的SPA（单页应用程序）变得复杂时，打包构建后的Javascript包会变得非常大，以至于严重影响页面的加载时间。幸运的是：`vue-router`支持WebPack内置的异步模块加载系统。
+        所以，那些使用较少的路由组件不必打包进bundles里，只需要在路由被访问时按需加载。
+        当你的SPA（单页应用程序）变得复杂时，
+        打包构建后的Javascript包会变得非常大，以至于严重影响页面的加载时间。幸运的是：`vue-router`支持WebPack内置的异步模块加载系统。所以，那些使用较少的路由组件不必打包进bundles里，只需要在路由被访问时按需加载。
+        当你的SPA（单页应用程序）变得复杂时，
+        打包构建后的Javascript包会变得非常大，
+        以至于严重影响页面的加载时间。幸运的是：`vue-router`支持WebPack内置的异步模块加载系统。所以，那些使用较少的路由组件不必打包进bundles里，只需要在路由被访问时按需加载。
+        当你的SPA（单页应用程序）变得复杂时，打包构建后的Javascript包会变得非常大，以至于严重影响页面的加载时间。幸运的是：`vue-router`支持WebPack内置的异步模块加载系统。所以，那些使用较少的路由组件不必打包进bundles里，只需要在路由被访问时按需加载。
+      </textarea>
+    </form>
   </div>
 </div>
