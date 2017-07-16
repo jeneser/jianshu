@@ -1,0 +1,123 @@
+@import "../../../theme/theme";
+
+.writer {
+  display: flex;
+  height: 100%;
+}
+
+.aside {
+  flex: 0 0 17%;
+  min-height: 3rem;
+  background-color: #3f3f3f;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .home-wrap {
+    padding: 3rem 1.9rem .5rem 0;
+    text-align: center;
+
+    .go-home {
+      display: block;
+      font-size: 15px;
+      color: $primary;
+      border: .1rem solid $primary;
+    }
+  }
+
+  .new-notebook {
+    padding: 0 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    .create-notebook {
+      font-size: 11px;
+      font-weight: normal;
+      line-height: 2rem;
+      color: #fff;
+    }
+  }
+
+  .notebooks {
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 2rem;
+    font-size: 15px;
+
+    .item {
+      position: relative;
+      height: 4rem;
+      line-height: 4rem;
+
+      .notebook-name {
+        display: block;
+        height: 40px;
+        margin-left: -15px;
+        margin-right: -15px;
+        color: whitesmoke;
+
+        span {
+          position: absolute;
+          left: 0;
+          right: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .edit-notebook {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #a0a0a0;
+      }
+
+      a:hover {
+        background-color: #646464;
+      }
+    }
+
+    .active {
+      .notebook-name {
+        background-color: #646464;
+        border-left: 3px solid #ec7259;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+  }
+
+  .commercial {
+    .go-recycle {
+      display: block;
+      padding: 20px 0 30px 15px;
+      font-size: 14px;
+      color: #999999;
+
+      i {
+        margin-right: 5px;
+        font-size: 22px;
+        vertical-align: middle;
+      }
+
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+
+}
+
+.middle {
+  flex: 0 0 25%;
+  background-color: green;
+
+}
+
+.main {
+  flex: 0 0 58%;
+  background-color: blue;
+
+}

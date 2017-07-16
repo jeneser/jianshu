@@ -32,6 +32,10 @@ $headings: (
 // $font-size-root value, which is on the <html> element
 // is what can scale all fonts
 
+html, body {
+  height: 100%;
+}
+
 html {
   font-size: $font-size-root;
 }

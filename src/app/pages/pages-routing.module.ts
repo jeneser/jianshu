@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: 'app/pages/signin/signin.module#SigninModule'
   },
   {
+    path: 'writer',
+    loadChildren: 'app/pages/writer/writer.module#WriterModule'
+  },
+  {
     path: '',
     component: PagesComponent,
     children: [
