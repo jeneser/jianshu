@@ -40,6 +40,10 @@ const routes: Routes = [
       {
         path: 'r',  // recommendation
         loadChildren: 'app/pages/recommendation/recommendation.module#RecommendationModule'
+      },
+      {
+        path: 'u',  // user
+        loadChildren: 'app/pages/user/user.module#UserModule'
       }
     ]
   }
