@@ -30,6 +30,11 @@
   border-radius: $btn-default-border-radius;
 }
 
+// Box center
+%box-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Flex box align center
 %block-center {
@@ -41,4 +46,15 @@
 %separator {
   margin: -0.5rem 0 1.5rem;
   border-top: .1rem solid rgba($light, .2);
+}
+
+// Note post content width
+%post-content-width {
+  width: $post-limit-width;
+}
+
+// Base spacing
+%base-spacing {
+  margin-top: $baseSpacing;
+  margin-bottom: $baseSpacing;
 }

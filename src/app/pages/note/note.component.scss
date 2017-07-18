@@ -1,30 +1,16 @@
 @import "../../../theme/theme";
 @import "../../../theme/placeholder";
 
-// Post
 .post {
-  margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 6rem;
-  width: $post-limit-width;
-
-  .title {
-    font-size: $h1-font-size;
-  }
-
-  .author {
-    margin: 3rem 0 4rem;
-  }
+  @extend %box-center;
+  @extend %post-content-width;
 
   .article {
     .content {
       p {
-        margin: 0 0 $p-margin-bottom;
-        line-height: $p-line-height;
+        margin-bottom: $p-margin-bottom;
         font-size: $p-font-size;
-        font-weight: $p-font-weight;
         color: $black;
-        word-break: break-word;
       }
 
       .image-package {

@@ -2,6 +2,7 @@
 // --------------------------------------------------
 
 @import "./theme";
+@import "./placeholder";
 
 // App Structure
 // --------------------------------------------------
@@ -53,12 +54,6 @@ $headings: (
   }
 }
 
-// Typography
-// --------------------------------------------------
-
-
-
-
 // Misc
 // --------------------------------------------------
 
@@ -88,6 +83,19 @@ $headings: (
   cursor: pointer;
 }
 
+// Utilities
+// --------------------------------------------------
+
+// Typography
+// --------------------------------------------------
+
+p {
+  line-height: $baseLineHeight;
+
+  @extend %base-spacing;
+}
+
+
 // Spacing helpers
 // --------------------------------------------------
 
@@ -108,6 +116,22 @@ $headings: (
 }
 
 .phl {
+  padding: 0 2rem;
+}
+
+.ptl {
+  padding-top: 2rem;
+}
+
+.mbl {
+  margin-bottom: 2rem;
+}
+
+.pvm {
+  padding: 2rem 0;
+}
+
+.phm {
   padding: 0 2rem;
 }
 
