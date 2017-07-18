@@ -1,31 +1,20 @@
 @import "../../../theme/theme";
+@import "../../../theme/placeholder";
 
 .home {
-  display: flex;
-  justify-content: center;
-  min-width: $nav-bar-min-width;
-}
+  @extend %block-center;
 
-.container {
-  margin: 0 2rem;
+  min-width: $screen-breakpoints-sm;
 }
 
 .index {
   display: flex;
-  max-width: $limit-min-width;
-  margin: 4rem 0;
+
+  max-width: $content-max-width;
 }
 
 .main {
-  flex: 2;
-
   .split-line {
-    margin: -0.5rem 0 1.5rem;
-    border-top: .1rem solid rgba($light, .2);
+    @extend %separator;
   }
-}
-
-.aside {
-  flex: 1;
-  margin-left: 4%;
 }

@@ -29,3 +29,16 @@
   outline: none;
   border-radius: $btn-default-border-radius;
 }
+
+
+// Flex box align center
+%block-center {
+  display: flex;
+  justify-content: center;
+}
+
+// Separator
+%separator {
+  margin: -0.5rem 0 1.5rem;
+  border-top: .1rem solid rgba($light, .2);
+}
