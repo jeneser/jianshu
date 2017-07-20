@@ -1,200 +1,216 @@
 @import "../../../theme/theme";
 @import "../../../theme/placeholder";
+@import "../../../theme/mixin";
 
-.post {
+// @prop Paragraph spacing
+$article-paragraph-spacing:       2.5rem !default;
+// @prop Paragraph fontSize
+$article-paragraph-fontSize:      1.6rem !default;
+// @prop Paragraph fontSize
+$article-paragraph-color:         $black;
+// @prop Notebook fontSize
+$notebook-name-fontSize:          $h6-font-size;
+// @prop Notebook fontSize
+$notebook-name-color:             rgba($dark, .5);
+
+.note-post {
   @extend %box-center;
   @extend %post-content-width;
+  @extend %mbl;
+  @extend %pvl;
+}
 
-  .article {
-    .content {
-      p {
-        margin-bottom: $p-margin-bottom;
-        font-size: $p-font-size;
-        color: $black;
-      }
+.post-article {
+  @extend %ptl;
+}
 
-      .image-package {
-        width: 100%;
-        margin-bottom: $p-margin-bottom;
+.article-author {
+  @extend %pvm;
+  @extend %mbl;
+}
 
-        img {
-          @extend %responsive-img;
-          vertical-align: middle;
-        }
-      }
-    }
-
-    .foot {
-      display: flex;
-      justify-content: space-between;
-      margin: 4rem 0 3rem;
-
-      span, i {
-        font-size: $h6-font-size;
-        color: rgba($dark, .5);
-      }
-
-      .copyright {
-        .report {
-          margin-right: 2rem;
-        }
-      }
-    }
+.article-content {
+  // TODO: Need Refactor when api joined
+  p {
+    margin-bottom: $article-paragraph-spacing;
+    font-size: $article-paragraph-fontSize;
+    color: $article-paragraph-color;
   }
 
-  .follow-detail {
-    padding: 2rem;
-    background-color: rgba($light, .05);
-    border: .1rem solid #e1e1e1;
-    border-radius: $btn-default-border-radius;
-    font-size: $h6-font-size;
+  .image-package {
+    @include image-package;
+  }
+}
 
-    .signature {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: .1rem solid #e1e1e1;
-      color: $light;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+.article-foot {
+  @extend %block-between;
+  @extend %pvl;
+  @extend %mtl;
+  @extend %mbm;
+
+  .notebook-name,
+  .iconfont {
+    font-size: $notebook-name-fontSize;
+    color: $notebook-name-color;
   }
 
-  .support-author {
-    padding: 3rem 0 2rem;
-    text-align: center;
-    border-bottom: .1rem solid #f0f0f0;
+  .report {
+    @extend %mrl;
+  }
+}
 
-    p {
-      padding: 0 3rem;
-      margin-bottom: 2rem;
-      min-height: 2.4rem;
-      font-size: 1.7rem;
-    }
+.follow-detail {
+  padding: 2rem;
+  background-color: rgba($light, .05);
+  border: .1rem solid #e1e1e1;
+  border-radius: $btn-default-border-radius;
+  font-size: $h6-font-size;
 
-    .btn-pay {
-      margin-bottom: 2rem;
-      padding: 0 2.5rem;
-      font-size: 1.6rem;
-      color: #fff;
-      background-color: $primary;
-    }
+  .signature {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: .1rem solid #e1e1e1;
+    color: $light;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
 
-    .support-list {
+.support-author {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  border-bottom: .1rem solid #f0f0f0;
+
+  p {
+    padding: 0 3rem;
+    margin-bottom: 2rem;
+    min-height: 2.4rem;
+    font-size: 1.7rem;
+  }
+
+  .btn-pay {
+    margin-bottom: 2rem;
+    padding: 0 2.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: $primary;
+  }
+
+  .support-list {
+    display: inline-block;
+    height: 5rem;
+
+    li {
       display: inline-block;
-      height: 5rem;
+      margin: 0 -0.5rem;
 
-      li {
+      .avatar {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+      }
+
+      img {
+        @extend %radius-img;
+        border: .3rem solid #fff;
+      }
+    }
+  }
+}
+
+.meta-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+
+  .like {
+    .like-group {
+      padding: 1.3rem 0 1.5rem;
+      line-height: normal;
+      border: .1rem solid $primary;
+      border-radius: 4rem;
+
+      .btn-like {
         display: inline-block;
-        margin: 0 -0.5rem;
+        font-size: 1.9rem;
 
-        .avatar {
-          display: block;
-          width: 4rem;
-          height: 4rem;
+        a {
+          padding: 1.8rem 1.5rem 1.8rem 3rem;
+          color: $primary;
           cursor: pointer;
         }
-
-        img {
-          @extend %radius-img;
-          border: .3rem solid #fff;
-        }
-      }
-    }
-  }
-
-  .meta-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 3rem;
-
-    .like {
-      .like-group {
-        padding: 1.3rem 0 1.5rem;
-        line-height: normal;
-        border: .1rem solid $primary;
-        border-radius: 4rem;
-
-        .btn-like {
-          display: inline-block;
-          font-size: 1.9rem;
-
-          a {
-            padding: 1.8rem 1.5rem 1.8rem 3rem;
-            color: $primary;
-            cursor: pointer;
-          }
-        }
-
-        .modal-wrap {
-          display: inline-block;
-          font-size: $h4-font-size;
-          border-left: .1rem solid $primary;
-
-          a {
-            padding: 1.8rem 3rem 1.8rem 1.7rem;
-            color: $primary;
-            cursor: pointer;
-          }
-        }
       }
 
-      .like-group:hover {
-        background-color: rgba($primary, .05);
-      }
-    }
-
-    .share-group {
-      margin-top: .6rem;
-
-      .share-circle {
+      .modal-wrap {
         display: inline-block;
-        width: 5rem;
-        height: 5rem;
-        margin-left: .5rem;
-        text-align: center;
-        border: .1rem solid #dcdcdc;
-        border-radius: 50%;
-        vertical-align: middle;
-        cursor: pointer;
+        font-size: $h4-font-size;
+        border-left: .1rem solid $primary;
 
-        i {
-          margin-top: 1rem;
-          font-size: 2.4rem;
-          line-height: 2;
-        }
-
-        .ic-wechat {
-          color: $secondary;
-        }
-
-        .ic-weibo {
+        a {
+          padding: 1.8rem 3rem 1.8rem 1.7rem;
           color: $primary;
+          cursor: pointer;
         }
-
-        .ic-picture {
-          color: $balanced;
-        }
-      }
-
-      .share-circle:hover {
-        background-color: hsla(0,0%,71%,.1);
-      }
-
-      .more-share {
-        width: auto;
-        padding: .4rem 1.8rem;
-        font-size: 1.4rem;
-        color: #9b9b9b;
-        line-height: 4rem;
-        border-radius: 5rem;
       }
     }
 
-
-
+    .like-group:hover {
+      background-color: rgba($primary, .05);
+    }
   }
+
+  .share-group {
+    margin-top: .6rem;
+
+    .share-circle {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      margin-left: .5rem;
+      text-align: center;
+      border: .1rem solid #dcdcdc;
+      border-radius: 50%;
+      vertical-align: middle;
+      cursor: pointer;
+
+      i {
+        margin-top: 1rem;
+        font-size: 2.4rem;
+        line-height: 2;
+      }
+
+      .ic-wechat {
+        color: $secondary;
+      }
+
+      .ic-weibo {
+        color: $primary;
+      }
+
+      .ic-picture {
+        color: $balanced;
+      }
+    }
+
+    .share-circle:hover {
+      background-color: hsla(0,0%,71%,.1);
+    }
+
+    .more-share {
+      width: auto;
+      padding: .4rem 1.8rem;
+      font-size: 1.4rem;
+      color: #9b9b9b;
+      line-height: 4rem;
+      border-radius: 5rem;
+    }
+  }
+
+
+
 }
 
 // Bottom

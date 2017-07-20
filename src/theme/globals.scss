@@ -61,6 +61,10 @@ $headings: (
   margin-top: $nav-bar-height;
 }
 
+.container {
+  @extend %mhl;
+}
+
 .hide {
   display: none;
 }
@@ -95,79 +99,3 @@ p {
   @extend %base-spacing;
 }
 
-
-// Spacing helpers
-// --------------------------------------------------
-
-// p,m = padding,margin
-// a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
-// s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
-
-.mvl {
-  margin: 2rem 0;
-}
-
-.mhl {
-  margin: 0 2rem;
-}
-
-.pvl {
-  padding: 2rem 0;
-}
-
-.phl {
-  padding: 0 2rem;
-}
-
-.ptl {
-  padding-top: 2rem;
-}
-
-.mbl {
-  margin-bottom: 2rem;
-}
-
-.pvm {
-  padding: 2rem 0;
-}
-
-.phm {
-  padding: 0 2rem;
-}
-
-// Grid
-// --------------------------------------------------
-
-.size1of1 {
-  width: 100%;
-}
-
-.size1of2 {
-  width: 50%;
-}
-
-.size1of3 {
-  width: 33.33333%;
-}
-
-.size2of3{
-  width: 66.66667%;
-}
-
-// col 24
-
-.col-sm-1 {
-  width: 4.16667%;
-}
-
-.col-sm-16 {
-  width: 66.66667%;
-}
-
-.col-sm-7 {
-  width: 29.16667%;
-}
-
-.col-sm-offset-1 {
-  margin-left: 4.16667%;
-}

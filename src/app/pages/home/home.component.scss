@@ -1,20 +1,43 @@
+// Import
+// ----------------------------------
+
 @import "../../../theme/theme";
 @import "../../../theme/placeholder";
+@import "../../../theme/mixin";
+
+// Props
+// ----------------------------------
+
+// @prop Home page Minimum width
+$home-min-width:       $screen-breakpoints-sm;
+// @prop Index container Maximum width
+$index-max-width:      $content-max-width;
+
+// Rules
+// ----------------------------------
 
 .home {
   @extend %block-center;
 
-  min-width: $screen-breakpoints-sm;
+  min-width: $home-min-width;
 }
 
 .index {
+  @include spacing(pvl, mvl);
+
   display: flex;
 
-  max-width: $content-max-width;
+  max-width: $index-max-width;
 }
 
 .main {
-  .split-line {
-    @extend %separator;
-  }
+  @include grid(col-sm-16);
+}
+
+.main__split-line {
+  @extend %separator;
+}
+
+.aside {
+  @include grid(col-sm-7, col-sm-offset-1);
 }
