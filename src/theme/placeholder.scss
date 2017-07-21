@@ -1,5 +1,46 @@
 @import "./theme";
 
+// Button base
+%btn-base {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+
+  @extend %ellipsis;
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+// Horizontal center
+%center-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Flex box align center
+%flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+// Ellipsis
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+
 // Img
 %responsive-img {
   width: 100%;
@@ -28,23 +69,7 @@
   border: none;
   outline: none;
   border-radius: $btn-default-border-radius;
-}
-
-// Box center
-%box-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-// Flex box align center
-%block-center {
-  display: flex;
-  justify-content: center;
-}
-
-%block-between {
-  display: flex;
-  justify-content: space-between;
+  cursor: pointer;
 }
 
 // Separator
@@ -67,11 +92,19 @@
 // Spacing
 // --------------------------------------------------
 
-// p,m = padding,margin
-// a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
-// s,m,l,n = small(.5rem),medium(1rem),large(2rem),none(0)
+// p, m = padding, margin
+// a, t, r, b, l, h, v = all, top, right, bottom, left, horizontal, vertical
+// s, m, l, n = small(.5rem), medium(1rem), large(2rem), none(0)
 
 // large(2rem)
+%pal {
+  padding: 2rem
+}
+
+%mal {
+  margin: 2rem;
+}
+
 %mvl {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -117,6 +150,15 @@
 %phm {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+%mhm {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+%mtm {
+  margin-top: 1rem;
 }
 
 %mbm {

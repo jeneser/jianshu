@@ -1,10 +1,10 @@
 <div class="note has-header">
-  <!-- Post -->
+  <!-- Note post -->
   <div class="note-post">
     <!-- Article content -->
     <div class="post-article">
-      <h1 class="article-title">你的自律，正在慢慢逼疯你</h1>
-      <!-- Author -->
+      <h1 class="post-article__title">你的自律，正在慢慢逼疯你</h1>
+      <!-- Article author -->
       <div class="article-author">
         <app-avatar>
           <span class="tag">作者</span>
@@ -15,13 +15,13 @@
         </app-avatar>
         <!-- If it is the current author, add edit button -->
       </div>
-      <!-- Content -->
+      <!-- Article content -->
       <div class="article-content">
         <div class="rich-media-content">
           <div class="image-package">
-            <img src="//upload-images.jianshu.io/upload_images/1933412-809dde1a74646886?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-            <div class="image-caption">
-              <p class="caption">念念不忘</p>
+            <img class="image-package__img" src="//upload-images.jianshu.io/upload_images/1933412-809dde1a74646886?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+            <div class="image-package__caption">
+              <p class="image-package__alt">念念不忘</p>
             </div>
           </div>
           <p><strong>文&nbsp;| 一棵花白</strong></p>
@@ -62,35 +62,35 @@
           <p>自律其实就是这么简单，一点都不洋气时尚高大上，不是只有人中龙凤才能做到，也不是一定要每一个小时都满满当当，活成机器也还挺没意思的。没必要为了自律而焦虑，吃好睡好，人生最重要的就是开心。</p>
         </div>
       </div>
-      <!-- Foot -->
+      <!-- Article foot -->
       <div class="article-foot">
+        <!-- Notebook -->
         <a class="notebook" href="">
-          <i class="iconfont ic-search-notebook"></i>
-          <span class="notebook-name">生活再操蛋还是得继续啊</span>
+          <i class="iconfont ic-search-notebook notebook__icon"></i>
+          <span class="notebook__name">生活再操蛋还是得继续啊</span>
         </a>
-        <div class="copyright">
-          <span class="report">举报文章</span>
-          <span class="Rights">© 著作权归作者所有</span>
+        <!-- Rights -->
+        <div class="rights">
+          <span class="rights__report">举报文章</span>
+          <span class="rights__copyright">© 著作权归作者所有</span>
         </div>
       </div>
     </div>
     <!-- Detail author -->
     <div class="follow-detail">
-      <div class="info">
-        <app-avatar class="author-detail">
-          <a class="avatar" routerLink="/" target="_blank">
-            <img src="//upload.jianshu.io/users/upload_avatars/6287/06c537002583.png?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
-          </a>
-          <a class="name" routerLink="/" target="_blank">刘淼</a>
-          <i class="iconfont ic-man"></i>
-        </app-avatar>
-      </div>
-      <div class="signature">官方专题【人物】主编。微信公众号：一棵花白(yikehuabai)</div>
+      <app-avatar class="author-detail">
+        <a class="avatar" routerLink="/" target="_blank">
+          <img src="//upload.jianshu.io/users/upload_avatars/6287/06c537002583.png?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+        </a>
+        <a class="name" routerLink="/" target="_blank">刘淼</a>
+        <i class="iconfont ic-man"></i>
+      </app-avatar>
+      <div class="follow-detail__signature">官方专题【人物】主编。微信公众号：一棵花白(yikehuabai)</div>
     </div>
     <!-- Support author -->
     <div class="support-author">
-      <p>最近打算存点私房钱，吃点高端的SHA VILLA沙县小吃这样的餐厅</p>
-      <div class="btn btn-pay">赞赏支持</div>
+      <p class="support-author__show">最近打算存点私房钱，吃点高端的SHA VILLA沙县小吃这样的餐厅</p>
+      <div class="support-author__pay btn btn-pay">赞赏支持</div>
       <div class="supporter">
         <ul class="support-list">
           <li>

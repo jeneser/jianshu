@@ -14,6 +14,8 @@
 }
 
 // Position
+// @param position, $top, $left, $right, $bottom - Position
+// ----------------------------------
 @mixin position($position, $top: null, $left: null, $right: null, $bottom: null) {
   $list: (top: $top, left: $left, right: $right, bottom: $bottom);
 
@@ -26,19 +28,34 @@
   }
 }
 
+
+// Center horizontal
+// @param $args - default null
+// Usage: center-horizontal, center-horizontal(flex)
+// ----------------------------------
+@mixin center-horizontal($args: null) {
+  @if $args == null {
+    @extend %center-horizontal;
+  } @else if $args == flex {
+    @extend %flex-center-horizontal;
+  }
+}
+
 // Image package
+// Usage: image-package
+// ----------------------------------
 @mixin image-package {
   width: 70rem;
   margin-left: -4rem;
   text-align: center;
 
-  img {
+  .image-package__alt {
     max-width: 100%;
     vertical-align: middle;
     cursor: zoom-in;
   }
 
-  .caption {
+  .image-package__alt {
     display: inline-block;
     min-width: 20%;
     max-width: 80%;
@@ -47,7 +64,28 @@
   }
 }
 
+// Display
+// @param $arg - display
+// Usage: display(flex)
+// ----------------------------------
+@mixin display($arg) {
+  display: $arg;
+}
+
+// Justify-content
+// @param $arg - flex position
+// Usage: justify-content(space-between)
+// ----------------------------------
+@mixin justify-content($arg) {
+  @include display(flex);
+  justify-content: $arg;
+}
+
+
 // Spacing
+// @param $args - args list
+// Usage: spacing(ptl, mtl)
+// ----------------------------------
 @mixin spacing($args...) {
   @each $space in $args {
     @extend %#{$space};
@@ -55,8 +93,48 @@
 }
 
 // Grid
+// @param $args - args list
+// Usage: grid(col-sm-7, col-sm-offset-1)
+// ----------------------------------
 @mixin grid($args...) {
   @each $col in $args {
     @extend %#{$col};
+  }
+}
+
+// Border
+// @param $props - $props list
+// @param $args - args list
+// @param $rad - border radius
+// Usage: border(top left right, .1rem solid #e1e1e1, $rad: 4rem)
+// Usage: border(all, .1rem solid #e1e1e1)
+// ----------------------------------
+@mixin border($props, $args, $rad: null) {
+  @if $props == all {
+    border: $args;
+  } @else {
+    @each $prop in $props {
+      border-#{$prop}: $args;
+    }
+  }
+  @if $rad != null {
+    border-radius: $rad;
+  }
+}
+
+// Inline-alignment
+// @param $arg - text(text-align)
+// @param $vertical - vertical(vertical-align)
+// Usage: inline-alignment($text: center)
+// Usage: inline-alignment($vertical: middle)
+// ----------------------------------
+@mixin inline-alignment($text: null, $vertical: null) {
+  // text-align
+  @if $text != null {
+    text-align: $text;
+  }
+  // vertical-align
+  @if $vertical != null {
+    vertical-align: $vertical;
   }
 }

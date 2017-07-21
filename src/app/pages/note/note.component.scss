@@ -1,7 +1,15 @@
+// Import
+// ----------------------------------
+
 @import "../../../theme/theme";
 @import "../../../theme/placeholder";
 @import "../../../theme/mixin";
 
+// Props
+// ----------------------------------
+
+// @prop Content width
+$post-content-width:              62rem !default;
 // @prop Paragraph spacing
 $article-paragraph-spacing:       2.5rem !default;
 // @prop Paragraph fontSize
@@ -13,22 +21,27 @@ $notebook-name-fontSize:          $h6-font-size;
 // @prop Notebook fontSize
 $notebook-name-color:             rgba($dark, .5);
 
+// Rules
+// ----------------------------------
+
+// Note post
 .note-post {
-  @extend %box-center;
+  @include center-horizontal;
+  @include spacing(mbl, pvl);
   @extend %post-content-width;
-  @extend %mbl;
-  @extend %pvl;
 }
 
+// Article content
 .post-article {
-  @extend %ptl;
+  @include spacing(ptl);
 }
 
+// Article author
 .article-author {
-  @extend %pvm;
-  @extend %mbl;
+  @include spacing(pvm, mbl);
 }
 
+// Article content
 .article-content {
   // TODO: Need Refactor when api joined
   p {
@@ -36,66 +49,52 @@ $notebook-name-color:             rgba($dark, .5);
     font-size: $article-paragraph-fontSize;
     color: $article-paragraph-color;
   }
-
-  .image-package {
-    @include image-package;
-  }
 }
 
+.image-package {
+  @include image-package;
+}
+
+// Article foot
 .article-foot {
-  @extend %block-between;
-  @extend %pvl;
-  @extend %mtl;
-  @extend %mbm;
-
-  .notebook-name,
-  .iconfont {
-    font-size: $notebook-name-fontSize;
-    color: $notebook-name-color;
-  }
-
-  .report {
-    @extend %mrl;
-  }
+  @include justify-content(space-between);
+  @include spacing(pvl, mtl, mbm);
 }
 
+// Notebook
+.notebook__icon,
+.notebook__name {
+  font-size: $notebook-name-fontSize;
+  color: $notebook-name-color;
+}
+
+// Rights
+.rights__report {
+  @include spacing(mrl);
+}
+
+// Detail author
 .follow-detail {
-  padding: 2rem;
-  background-color: rgba($light, .05);
-  border: .1rem solid #e1e1e1;
-  border-radius: $btn-default-border-radius;
-  font-size: $h6-font-size;
+  @include spacing(pal);
+  @include border(all, .1rem solid #e1e1e1, $rad: $btn-default-border-radius);
 
-  .signature {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: .1rem solid #e1e1e1;
-    color: $light;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  background-color: rgba($light, .05);
+  font-size: $h6-font-size;
 }
 
+.follow-detail__signature {
+  @include spacing(ptl, mtl);
+  @include border(top, .1rem solid #e1e1e1);
+  @extend %ellipsis;
+
+  color: $light;
+}
+
+// Support author
 .support-author {
-  padding: 3rem 0 2rem;
-  text-align: center;
-  border-bottom: .1rem solid #f0f0f0;
-
-  p {
-    padding: 0 3rem;
-    margin-bottom: 2rem;
-    min-height: 2.4rem;
-    font-size: 1.7rem;
-  }
-
-  .btn-pay {
-    margin-bottom: 2rem;
-    padding: 0 2.5rem;
-    font-size: 1.6rem;
-    color: #fff;
-    background-color: $primary;
-  }
+  @include spacing(pvl, mtm);
+  @include border(bottom, .1rem solid #f0f0f0);
+  @include inline-alignment($text: center);
 
   .support-list {
     display: inline-block;
@@ -120,6 +119,22 @@ $notebook-name-color:             rgba($dark, .5);
   }
 }
 
+.support-author__show {
+  @include spacing(phl, mhm, mbl);
+
+  min-height: 2.4rem;
+  font-size: 1.7rem;
+}
+
+.support-author__pay {
+  margin-bottom: 2rem;
+  padding: 0 2.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: $primary;
+}
+
+// Meta bottom
 .meta-bottom {
   display: flex;
   align-items: center;
