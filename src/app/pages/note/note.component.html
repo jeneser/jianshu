@@ -90,73 +90,72 @@
     <!-- Support author -->
     <div class="support-author">
       <p class="support-author__show">最近打算存点私房钱，吃点高端的SHA VILLA沙县小吃这样的餐厅</p>
-      <div class="support-author__pay btn btn-pay">赞赏支持</div>
-      <div class="supporter">
-        <ul class="support-list">
-          <li>
-            <a href="javascript:void(0)" class="avatar">
-              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="avatar">
-              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)" class="avatar">
-              <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div class="support-author__pay">赞赏支持</div>
+      <!-- Supporter -->
+      <ul class="supporter">
+        <li class="supporter__item">
+          <a class="supporter__avatar" href="javascript:void(0)">
+            <img class="supporter__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+          </a>
+        </li>
+        <li class="supporter__item">
+          <a class="supporter__avatar" href="javascript:void(0)">
+            <img class="supporter__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+          </a>
+        </li>
+        <li class="supporter__item">
+          <a class="supporter__avatar" href="javascript:void(0)">
+            <img class="supporter__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+          </a>
+        </li>
+      </ul>
     </div>
     <!-- Meta bottom -->
     <div class="meta-bottom">
       <!-- Like -->
       <div class="like">
-        <div class="btn like-group">
-          <div class="btn-like">
-            <a href="/signin"><i class="iconfont ic-like"></i>喜欢</a>
-          </div>
-          <div class="modal-wrap">
-            <a>97</a>
-          </div>
+        <div class="like__btn-group">
+          <a class="like__btn-like" href="/signin"><i class="iconfont ic-like"></i>喜欢</a>
+          <a class="like__btn-modal">97</a>
         </div>
       </div>
       <!-- Share group -->
-      <div class="share-group">
-        <a class="share-circle">
-          <i class="iconfont ic-wechat"></i>
+      <div class="share">
+        <a class="share__item">
+          <i class="share__icon iconfont ic-wechat"></i>
         </a>
-        <a class="share-circle">
-          <i class="iconfont ic-weibo"></i>
+        <a class="share__item">
+          <i class="share__icon iconfont ic-weibo"></i>
         </a>
-        <a class="share-circle">
-          <i class="iconfont ic-picture"></i>
+        <a class="share__item">
+          <i class="share__icon iconfont ic-picture"></i>
         </a>
-        <a class="share-circle more-share">更多分享</a>
+        <a class="share__item_more">更多分享</a>
       </div>
-
     </div>
   </div>
   <!-- Bottom -->
   <div class="note-bottom">
-    <div class="main">
+    <!-- Bottom main -->
+    <div class="bottom-main">
+      <!-- Meta -->
       <div class="meta">
-        <p class="title">被以下专题收入，发现更多相似内容</p>
+        <p class="meta__title">被以下专题收入，发现更多相似内容</p>
       </div>
       <app-collection></app-collection>
     </div>
+    <!-- Recommend note -->
     <div class="recommend-note">
+      <!-- Meta -->
       <div class="meta">
-        <p class="title">更多精彩内容</p>
+        <p class="meta__title">更多精彩内容</p>
       </div>
       <app-thumbnail></app-thumbnail>
       <app-thumbnail></app-thumbnail>
       <app-thumbnail></app-thumbnail>
     </div>
   </div>
+  <!-- Side tool -->
   <app-side-tool></app-side-tool>
 </div>
 

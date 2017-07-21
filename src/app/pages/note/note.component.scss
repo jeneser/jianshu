@@ -95,28 +95,6 @@ $notebook-name-color:             rgba($dark, .5);
   @include spacing(pvl, mtm);
   @include border(bottom, .1rem solid #f0f0f0);
   @include inline-alignment($text: center);
-
-  .support-list {
-    display: inline-block;
-    height: 5rem;
-
-    li {
-      display: inline-block;
-      margin: 0 -0.5rem;
-
-      .avatar {
-        display: block;
-        width: 4rem;
-        height: 4rem;
-        cursor: pointer;
-      }
-
-      img {
-        @extend %radius-img;
-        border: .3rem solid #fff;
-      }
-    }
-  }
 }
 
 .support-author__show {
@@ -127,131 +105,135 @@ $notebook-name-color:             rgba($dark, .5);
 }
 
 .support-author__pay {
-  margin-bottom: 2rem;
-  padding: 0 2.5rem;
-  font-size: 1.6rem;
-  color: #fff;
-  background-color: $primary;
+  @include btn(
+    $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
+    $variant: (#fff, $primary, $primary)
+  );
+}
+
+// Supporter
+.supporter {
+  @include spacing(mtl);
+}
+
+.supporter__item {
+  @include display(inline-block);
+  @include spacing(-mhs);
+}
+
+.supporter__avatar {
+  @include display(block);
+
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.supporter__img {
+  @extend %img-responsive;
+  @include border(all, .3rem solid #fff, $rad: 50%);
 }
 
 // Meta bottom
 .meta-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 3rem;
+  @include flex-box(flex, space-between, center);
+  @include spacing(ptm, mtl);
+}
 
-  .like {
-    .like-group {
-      padding: 1.3rem 0 1.5rem;
-      line-height: normal;
-      border: .1rem solid $primary;
-      border-radius: 4rem;
+// Like
+.like__btn-group {
+  @include border(all, .1rem solid $primary, 4rem);
+}
 
-      .btn-like {
-        display: inline-block;
-        font-size: 1.9rem;
+.like__btn-like {
+  @include btn(
+    $size: (1.5rem, 3rem, 1.9rem, normal, 0),
+    $variant: ($primary, transparent, transparent)
+  );
+}
 
-        a {
-          padding: 1.8rem 1.5rem 1.8rem 3rem;
-          color: $primary;
-          cursor: pointer;
-        }
-      }
+.like__btn-modal {
+  @include btn(
+    $size: (0, 3rem, $h4-font-size, normal, 0),
+    $variant: ($primary, transparent, transparent)
+  );
+  @include border(left, .1rem solid $primary);
+}
 
-      .modal-wrap {
-        display: inline-block;
-        font-size: $h4-font-size;
-        border-left: .1rem solid $primary;
+// Share
+.share__item {
+  @include display(inline-block);
+  @include spacing(mls);
+  @include inline-alignment($text: center, $vertical: middle);
+  @include border(all, .1rem solid #dcdcdc, 50%);
 
-        a {
-          padding: 1.8rem 3rem 1.8rem 1.7rem;
-          color: $primary;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .like-group:hover {
-      background-color: rgba($primary, .05);
-    }
+  &:hover {
+    background-color: hsla(0,0%,71%,.1);
   }
 
-  .share-group {
-    margin-top: .6rem;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
 
-    .share-circle {
-      display: inline-block;
-      width: 5rem;
-      height: 5rem;
-      margin-left: .5rem;
-      text-align: center;
-      border: .1rem solid #dcdcdc;
-      border-radius: 50%;
-      vertical-align: middle;
-      cursor: pointer;
+.share__icon {
+  @include spacing(mtm);
 
-      i {
-        margin-top: 1rem;
-        font-size: 2.4rem;
-        line-height: 2;
-      }
+  font-size: 2.4rem;
+  line-height: 2;
+}
 
-      .ic-wechat {
-        color: $secondary;
-      }
+// Iconfont
+.ic-wechat {
+  color: $secondary;
+}
 
-      .ic-weibo {
-        color: $primary;
-      }
+.ic-weibo {
+  color: $primary;
+}
 
-      .ic-picture {
-        color: $balanced;
-      }
-    }
+.ic-picture {
+  color: $balanced;
+}
 
-    .share-circle:hover {
-      background-color: hsla(0,0%,71%,.1);
-    }
+.share__item_more {
+  @extend .share__item;
+  @include spacing(pvs, phl);
+  @include border-radius(5rem);
 
-    .more-share {
-      width: auto;
-      padding: .4rem 1.8rem;
-      font-size: 1.4rem;
-      color: #9b9b9b;
-      line-height: 4rem;
-      border-radius: 5rem;
-    }
-  }
-
-
-
+  width: auto;
+  font-size: 1.4rem;
+  color: #9b9b9b;
+  line-height: 4rem;
 }
 
 // Bottom
 .note-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-box(flex, $align-items: center, $direction: column);
+  @include spacing(pvl);
+
   min-height: 21.3rem;
   background-color: #f5f5f5;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  // padding-top: 4rem;
+  // padding-bottom: 4rem;
+}
 
-  .meta {
-    .title {
-      font-size: 1.5rem;
-      padding-bottom: 1.5rem;
-      color: #a0a0a0;
-    }
-  }
+// Bottom main
+.bottom-main {
+  @include spacing(pbl);
 
-  .main {
-    width: $post-limit-width;
-    padding: 0 0 3rem;
-  }
+  width: $post-limit-width;
+}
 
-  .recommend-note {
-    width: $post-limit-width;
-  }
+// Meta
+.meta {
+  @include spacing(pbm, mbs);
+
+  font-size: 1.5rem;
+  color: #a0a0a0;
+}
+
+// Recommend note
+.recommend-note {
+  width: $post-limit-width;
 }

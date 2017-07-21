@@ -81,6 +81,19 @@
   justify-content: $arg;
 }
 
+// Flex box
+// @param $arg - display
+// Usage: display(flex)
+// ----------------------------------
+@mixin flex-box($flex: flex, $justify-content: null, $align-items: null, $direction: null, $wrap: null, $flow: null, $align-content: null) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  flex-flow: $flow;
+  align-content: $align-content;
+}
 
 // Spacing
 // @param $args - args list
@@ -137,4 +150,50 @@
   @if $vertical != null {
     vertical-align: $vertical;
   }
+}
+
+// Button
+// @param $size - button size
+// @param $variant - button variant
+// Usage:
+// btn(
+//   $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
+//   $variant: (#fff, $primary, $primary));
+// ----------------------------------
+@mixin btn($size: null, $variant: null) {
+  @extend %btn-base;
+  @if $size != null {
+    @include btn-size($size...);
+  }
+  @if $variant != null {
+    @include btn-variant($variant...);
+  }
+
+  cursor: pointer;
+}
+
+// Button sizes
+// Usage: btn-size(0, 2.5rem, 1.6rem, 3.8rem, .4rem)
+// ----------------------------------
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+// Button variants
+// Usage: btn-variant(#fff, $primary, $primary)
+// ----------------------------------
+@mixin btn-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+}
+
+// Border radius
+// Usage: border-radius(2rem)
+// ----------------------------------
+@mixin border-radius($radius) {
+  border-radius: $radius;
 }

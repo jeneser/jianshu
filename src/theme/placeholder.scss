@@ -37,6 +37,12 @@
   white-space: nowrap;
 }
 
+// Responsive image
+%img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 
@@ -95,6 +101,7 @@
 // p, m = padding, margin
 // a, t, r, b, l, h, v = all, top, right, bottom, left, horizontal, vertical
 // s, m, l, n = small(.5rem), medium(1rem), large(2rem), none(0)
+// - = negative(-)
 
 // large(2rem)
 %pal {
@@ -129,6 +136,18 @@
   padding-top: 2rem;
 }
 
+%prl {
+  padding-right: 2rem;
+}
+
+%pll {
+  padding-left: 2rem;
+}
+
+%pbl {
+  padding-bottom: 2rem;
+}
+
 %mbl {
   margin-bottom: 2rem;
 }
@@ -152,6 +171,18 @@
   padding-right: 1rem;
 }
 
+%ptm {
+  padding-top: 1rem;
+}
+
+%prm {
+  padding-right: 1rem;
+}
+
+%plm {
+  padding-left: 1rem;
+}
+
 %mhm {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -165,6 +196,38 @@
   margin-bottom: 1rem;
 }
 
+// small(.5rem)
+%pvs {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+%phs {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+%mrs {
+  margin-right: .5rem;
+}
+
+%mls {
+  margin-left: .5rem;
+}
+
+%mts {
+  margin-top: .5rem;
+}
+
+%mbs {
+  margin-bottom: .5rem;
+}
+
+// negative(-)
+%-mhs {
+  margin-left: -0.5rem;
+  margin-right: -0.51rem;
+}
 
 // Grid
 // --------------------------------------------------
