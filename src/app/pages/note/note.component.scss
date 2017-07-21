@@ -63,7 +63,8 @@ $notebook-name-color:             rgba($dark, .5);
 
 // Notebook
 .notebook__icon,
-.notebook__name {
+.notebook__name,
+.rights {
   font-size: $notebook-name-fontSize;
   color: $notebook-name-color;
 }
@@ -222,7 +223,7 @@ $notebook-name-color:             rgba($dark, .5);
 .bottom-main {
   @include spacing(pbl);
 
-  width: $post-limit-width;
+  width: $post-content-width;
 }
 
 // Meta
@@ -235,5 +236,5 @@ $notebook-name-color:             rgba($dark, .5);
 
 // Recommend note
 .recommend-note {
-  width: $post-limit-width;
+  width: $post-content-width;
 }
