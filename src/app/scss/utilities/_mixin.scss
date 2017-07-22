@@ -1,5 +1,3 @@
-@import "./theme";
-
 // Reset form input border radius
 @mixin form-border-radius($elem, $nth, $dir) {
   #{$elem}:nth-child(#{$nth}) {

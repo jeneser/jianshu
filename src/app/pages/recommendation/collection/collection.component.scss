@@ -1,4 +1,9 @@
-@import "../../../../theme/theme";
+// Import utilities
+// ----------------------------------
+@import "../../../scss/utilities/index";
+
+// Rules
+// ----------------------------------
 
 .collection {
   display: flex;

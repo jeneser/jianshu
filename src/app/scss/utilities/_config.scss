@@ -1,6 +1,8 @@
-// Default Theme
+// Variables
 // --------------------------------------------------
 
+// $Colors
+// ----------------------------------
 $primary:               #ea6f5a !default;
 $secondary:             #00bb29 !default;
 $balanced:              #498ad5 !default;
@@ -9,27 +11,20 @@ $light:                 #969696 !default;
 $black:                 #1a1a1a !default;
 $dark:                  #333 !default;
 
+// $Scaffolding
+// ----------------------------------
 $text-color:                   #000 !default;
 $link-color:                   $primary !default;
 $background-color:             #fff !default;
 $subdued-text-color:           #666 !default;
 
+// $Typography
+// ----------------------------------
 $font-family-base:             -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif !default;
 // Font size of the root html
 $font-size-root:               62.5%;
 // 1.4rem == 14px
 $font-size-base:               1.3rem !default;
-
-// Screen breakpoints
-// ----------------------------------
-
-// Adapting to different screen sizes, for use in media queries
-$screen-breakpoints-sm: 768px      !default;
-$screen-breakpoints-md: 992px      !default;
-$screen-breakpoints-lg: 1200px     !default;
-
-// Font size of heading
-// ----------------------------------
 
 $h1-font-size:                 3.6rem !default;
 $h2-font-size:                 3rem !default;
@@ -38,21 +33,28 @@ $h4-font-size:                 1.8rem !default;
 $h5-font-size:                 1.4rem !default;
 $h6-font-size:                 1.2rem !default;
 
-// Nav
+// $Screen breakpoints
+// Adapting to different screen sizes, for use in media queries
+// ----------------------------------
+$screen-breakpoints-sm: 768px      !default;
+$screen-breakpoints-md: 992px      !default;
+$screen-breakpoints-lg: 1200px     !default;
+
+// Components
 // ----------------------------------
 
+// Nav
+// ----------------------------------
 $nav-bar-height:               5.6rem !default;
 $nav-bar-min-width:            76.8rem !default;
 $nav-bar-max-width:            144rem !default;
 
 // Content
 // ----------------------------------
-
 $content-max-width:            96rem !default;
 
 // Btn
 // ----------------------------------
-
 $btn-default-height:           3.8rem !default;
 $btn-default-margin-left:      1.5rem !default;
 $btn-default-padding-left:     1.5rem !default;
@@ -62,23 +64,19 @@ $btn-default-font-size:        1.5rem !default;
 
 // Card
 // ----------------------------------
-
 $card-box-shadow:              0 0 .8rem rgba(0,0,0,.1) !default;
 
 // Avatar
 // ----------------------------------
-
 $avatar-default-font-size:     1.3rem !default;
 $avatar-name-font-size:        1.6rem !default;
 
 // Icon
 // ----------------------------------
-
 $icon-font-size:               2rem !default;
 
 // Article
 // ----------------------------------
-
 $post-limit-width:             62rem !default;
 $p-font-size:                  1.6rem !default;
 $p-margin-bottom:              2.5rem !default;
@@ -87,6 +85,5 @@ $p-font-weight:                400 !default;
 
 // Whitespace
 // ----------------------------------
-
 $baseLineHeight:               1.5 !default;
 $baseSpacing:                  1.5rem !default;
