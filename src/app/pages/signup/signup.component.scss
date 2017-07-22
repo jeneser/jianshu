@@ -1,6 +1,9 @@
-@import "../../../theme/theme";
-@import "../../../theme/mixin";
-@import "../../../theme/placeholder";
+// Import utilities
+// ----------------------------------
+@import "../../scss/utilities/index";
+
+// Rules
+// ----------------------------------
 
 .signup {
   height: 100%;

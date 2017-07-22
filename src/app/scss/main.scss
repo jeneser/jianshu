@@ -7,6 +7,10 @@
 // ----------------------------------
 @import 'libs/index';
 
+// $Utilities
+// ----------------------------------
+@import 'utilities/config';
+
 // $Base
 // ----------------------------------
 @import 'base/index';
@@ -15,18 +19,14 @@
 // ----------------------------------
 @import 'atoms/index';
 
-// $Utilities
+// $Layout
 // ----------------------------------
-@import 'utilities/index';
+@import 'layout/index';
 
 // $Molecules
 // ----------------------------------
 @import 'molecules/index';
 
-// $Layout
-// ----------------------------------
-@import 'layout/index';
-
 // $Themes
 // ----------------------------------
-@import 'themes/theme.default';
+@import 'themes/index';

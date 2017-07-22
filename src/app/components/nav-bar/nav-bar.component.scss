@@ -1,5 +1,9 @@
-@import "../../../theme/theme";
-@import "../../../theme/mixin";
+// Import utilities
+// ----------------------------------
+@import "../../scss/utilities/index";
+
+// Rules
+// ----------------------------------
 
 .nav-bar {
   @include position(fixed, $top: 0);

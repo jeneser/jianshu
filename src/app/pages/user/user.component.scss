@@ -1,5 +1,9 @@
-@import "../../../theme/theme";
-@import "../../../theme/placeholder";
+// Import utilities
+// ----------------------------------
+@import "../../scss/utilities/index";
+
+// Rules
+// ----------------------------------
 
 .user {
   display: flex;
