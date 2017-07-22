@@ -1,12 +1,8 @@
-// Global style
+// Base Rules
 // --------------------------------------------------
-
-@import "./theme";
-@import "./placeholder";
 
 // App Structure
-// --------------------------------------------------
-
+// ----------------------------------
 * {
   box-sizing: border-box;
 }
@@ -15,7 +11,6 @@
 // By default, 1rem equals 10px. For example, 1.4rem  === 14px
 // $font-size-root value, which is on the <html> element
 // is what can scale all fonts
-
 html {
   width: 100%;
   height: 100%;
@@ -37,8 +32,7 @@ body {
 }
 
 // Font size of heading
-// --------------------------------------------------
-
+// ----------------------------------
 $headings: (
   h1: $h1-font-size,
   h2: $h2-font-size,
@@ -54,48 +48,19 @@ $headings: (
   }
 }
 
-// Misc
-// --------------------------------------------------
-
-.has-header {
-  margin-top: $nav-bar-height;
-}
-
-.container {
-  @extend %mhl;
-}
-
-.hide {
-  display: none;
-}
-
-.icon {
-  margin-right: .5rem;
-  font-size: $icon-font-size;
-  line-height: normal;
-}
-
-.btn {
-  display: inline-block;
-  line-height: $btn-default-height;
-  margin: $btn-default-margin;
-  border-radius: $btn-default-border-radius;
-  font-size: $btn-default-font-size;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-// Utilities
-// --------------------------------------------------
-
-// Typography
-// --------------------------------------------------
-
+// Element base rule
+// ----------------------------------
 p {
   line-height: $baseLineHeight;
 
   @extend %base-spacing;
 }
 
+a {
+  background: transparent;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
