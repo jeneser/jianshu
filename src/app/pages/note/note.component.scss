@@ -12,11 +12,11 @@ $article-paragraph-spacing:       2.5rem !default;
 // @prop Paragraph fontSize
 $article-paragraph-fontSize:      1.6rem !default;
 // @prop Paragraph fontSize
-$article-paragraph-color:         $black;
+$article-paragraph-color:         $gray-darker;
 // @prop Notebook fontSize
-$notebook-name-fontSize:          $h6-font-size;
+$notebook-name-fontSize:          $font-size-h6;
 // @prop Notebook fontSize
-$notebook-name-color:             rgba($dark, .5);
+$notebook-name-color:             rgba($gray-dark, .5);
 
 // Rules
 // ----------------------------------
@@ -76,8 +76,8 @@ $notebook-name-color:             rgba($dark, .5);
   @include spacing(pal);
   @include border(all, .1rem solid #e1e1e1, $rad: $btn-default-border-radius);
 
-  background-color: rgba($light, .05);
-  font-size: $h6-font-size;
+  background-color: rgba($gray-light, .05);
+  font-size: $font-size-h6;
 }
 
 .follow-detail__signature {
@@ -85,7 +85,7 @@ $notebook-name-color:             rgba($dark, .5);
   @include border(top, .1rem solid #e1e1e1);
   @extend %ellipsis;
 
-  color: $light;
+  color: $gray-light;
 }
 
 // Support author
@@ -152,7 +152,7 @@ $notebook-name-color:             rgba($dark, .5);
 
 .like__btn-modal {
   @include btn(
-    $size: (0, 3rem, $h4-font-size, normal, 0),
+    $size: (0, 3rem, $font-size-h4, normal, 0),
     $variant: ($primary, transparent, transparent)
   );
   @include border(left, .1rem solid $primary);

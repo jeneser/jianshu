@@ -13,14 +13,14 @@
     width: 5rem;
     height: 5rem;
     line-height: 2rem;
-    background-color: $background-color;
-    border: .1rem solid rgba($light, .25);
+    background-color: $body-bg;
+    border: .1rem solid rgba($gray-light, .25);
   }
 
   a {
     display: block;
     text-align: center;
-    color: $dark;
+    color: $gray-dark;
   }
 
   i {

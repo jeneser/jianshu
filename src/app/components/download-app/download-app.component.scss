@@ -23,8 +23,8 @@
     a {
       width: 33.33%;
       padding: 0 1rem;
-      font-size: $h5-font-size;
-      color: $background-color;
+      font-size: $font-size-h5;
+      color: $body-bg;
       text-align: center;
       line-height: 3rem;
     }
@@ -39,7 +39,7 @@
     }
 
     .code {
-      background-color: rgba($light, .8);
+      background-color: rgba($gray-light, .8);
     }
 
     .android {

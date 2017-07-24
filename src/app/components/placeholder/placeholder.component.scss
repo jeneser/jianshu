@@ -43,7 +43,7 @@
     width: 15rem;
     height: 12rem;
     border-radius: $btn-default-border-radius;
-    background-color: rgba($light, .23);
+    background-color: rgba($gray-light, .23);
   }
 
   .content {
@@ -60,7 +60,7 @@
       margin: 0 .5rem 0 0;
       vertical-align: middle;
       border-radius: 100%;
-      background-color: rgba($light, .23);
+      background-color: rgba($gray-light, .23);
     }
 
     .name {
@@ -68,21 +68,21 @@
       width: 20%;
       height: 1.6rem;
       vertical-align: middle;
-      background-color: rgba($light, .23);
+      background-color: rgba($gray-light, .23);
     }
 
     .title {
       width: 50%;
       height: 2rem;
       margin: 0 0 1.5rem;
-      background-color: rgba($light, .23);
+      background-color: rgba($gray-light, .23);
     }
 
     .text {
       width: 100%;
       height: 1.6rem;
       margin: 0 0 1rem;
-      background-color: rgba($light, .23);
+      background-color: rgba($gray-light, .23);
       animation: loading 1s ease-in-out infinite;
     }
 
@@ -96,8 +96,8 @@
     }
 
     .meta {
-      font-size: $h6-font-size;
-      color: rgba($light, .23);
+      font-size: $font-size-h6;
+      color: rgba($gray-light, .23);
 
       i {
         margin: 0 .5rem;
@@ -108,7 +108,7 @@
         display: inline-block;
         height: 1.6rem;
         vertical-align: middle;
-        background-color: rgba($light, .23);
+        background-color: rgba($gray-light, .23);
       }
 
       .view {

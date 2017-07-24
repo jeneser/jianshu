@@ -58,7 +58,7 @@
     min-width: 20%;
     max-width: 80%;
     border-bottom: .1rem solid #d9d9d9;
-    color: $light;
+    color: $gray-light;
   }
 }
 
@@ -194,4 +194,11 @@
 // ----------------------------------
 @mixin border-radius($radius) {
   border-radius: $radius;
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
 }

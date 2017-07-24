@@ -1,0 +1,34 @@
+// Separator
+%separator {
+  margin: -0.5rem 0 1.5rem;
+  border-top: .1rem solid rgba($gray-light, .2);
+}
+
+// Ellipsis
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Responsive image
+%img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+// Img
+%responsive-img {
+  width: 100%;
+  height: 100%;
+}
+
+%radius-img {
+  @extend %responsive-img;
+  border-radius: 50%;
+}
+
+%border-radius-img {
+  @extend %radius-img;
+  border: .1rem solid rgba($gray-light, .2);
+}

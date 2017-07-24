@@ -1,0 +1,20 @@
+// Note post content width
+%post-content-width {
+  width: $post-limit-width;
+}
+
+%size1of1 {
+  width: 100%;
+}
+
+%size1of2 {
+  width: 50%;
+}
+
+%size1of3 {
+  width: 33.33333%;
+}
+
+%size2of3{
+  width: 66.66667%;
+}

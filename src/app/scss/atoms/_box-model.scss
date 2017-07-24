@@ -1,21 +1,3 @@
-// Button base
-%btn-base {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-
-  @extend %ellipsis;
-}
-
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
-}
-
 // Horizontal center
 %center-horizontal {
   margin-left: auto;
@@ -26,65 +8,6 @@
 %flex-center-horizontal {
   display: flex;
   justify-content: center;
-}
-
-// Ellipsis
-%ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-// Responsive image
-%img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-
-// Img
-%responsive-img {
-  width: 100%;
-  height: 100%;
-}
-
-%radius-img {
-  @extend %responsive-img;
-  border-radius: 50%;
-}
-
-%border-radius-img {
-  @extend %radius-img;
-  border: .1rem solid rgba($light, .2);
-}
-
-// Button
-%default-button {
-  display: block;
-  width: 100%;
-  margin-top: 2rem;
-  padding: 1.2rem 1.8rem;
-  font-size: $h4-font-size;
-  color: $background-color;
-  background: $primary;
-  border: none;
-  outline: none;
-  border-radius: $btn-default-border-radius;
-  cursor: pointer;
-}
-
-// Separator
-%separator {
-  margin: -0.5rem 0 1.5rem;
-  border-top: .1rem solid rgba($light, .2);
-}
-
-// Note post content width
-%post-content-width {
-  width: $post-limit-width;
 }
 
 // Base spacing
@@ -229,41 +152,4 @@
 %-mhs {
   margin-left: -0.5rem;
   margin-right: -0.51rem;
-}
-
-// Grid
-// --------------------------------------------------
-
-%size1of1 {
-  width: 100%;
-}
-
-%size1of2 {
-  width: 50%;
-}
-
-%size1of3 {
-  width: 33.33333%;
-}
-
-%size2of3{
-  width: 66.66667%;
-}
-
-// col 24
-
-%col-sm-1 {
-  width: 4.16667%;
-}
-
-%col-sm-16 {
-  width: 66.66667%;
-}
-
-%col-sm-7 {
-  width: 29.16667%;
-}
-
-%col-sm-offset-1 {
-  margin-left: 4.16667%;
 }

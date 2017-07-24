@@ -1,7 +1,7 @@
 @font-face {
   font-family: iconfont;
-  src: url($fa-font-path + "iconfont/iconfont.eot");
-  src: url($fa-font-path + "iconfont/iconfont.eot") format("embedded-opentype"), url($fa-font-path + "iconfont/iconfont.woff") format("woff"), url($fa-font-path + "iconfont/iconfont.ttf") format("truetype"), url($fa-font-path + "iconfont/iconfont.svg") format("svg")
+  src: url($icon-font-path + "iconfont/iconfont.eot");
+  src: url($icon-font-path + "iconfont/iconfont.eot") format("embedded-opentype"), url($icon-font-path + "iconfont/iconfont.woff") format("woff"), url($icon-font-path + "iconfont/iconfont.ttf") format("truetype"), url($icon-font-path + "iconfont/iconfont.svg") format("svg")
 }
 
 .iconfont {

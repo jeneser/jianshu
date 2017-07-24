@@ -8,20 +8,20 @@
 .footer {
   margin-bottom: 2rem;
   font-size: 1.3rem;
-  color: $light;
+  color: $gray-light;
 
   a {
     display: inline-block;
-    color: $light;
+    color: $gray-light;
   }
 
   .icp {
     margin-top: 1rem;
-    font-size: $h6-font-size;
-    color: rgba($light, .5);
+    font-size: $font-size-h6;
+    color: rgba($gray-light, .5);
 
     a {
-      color: rgba($light, .5);
+      color: rgba($gray-light, .5);
     }
 
     img {
@@ -31,6 +31,6 @@
   }
 
   a:hover, .icp a:hover {
-    color: $dark;
+    color: $gray-dark;
   }
 }

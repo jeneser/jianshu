@@ -33,7 +33,7 @@
   .tag {
     margin-right: .6rem;
     padding: .1rem .2rem;
-    font-size: $h6-font-size;
+    font-size: $font-size-h6;
     color: $primary;
     border: .1rem solid $primary;
     border-radius: .3rem;
@@ -44,23 +44,23 @@
     margin-right: .6rem;
     padding-top: .5rem;
     font-size: $font-size-base;
-    color: $dark;
+    color: $gray-dark;
   }
 
   .follow {
     display: inline-block;
     padding: 0 .7rem 0 .5rem;
     text-align: center;
-    font-size: $h6-font-size;
-    color: $background-color;
+    font-size: $font-size-h6;
+    color: $body-bg;
     background-color: $secondary;
     border-radius: 4rem;
   }
 
   .meta {
     margin-top: .2rem;
-    font-size: $h6-font-size;
-    color: $light;
+    font-size: $font-size-h6;
+    color: $gray-light;
   }
 }
 
