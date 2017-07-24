@@ -56,8 +56,7 @@ $headings: (
 // ----------------------------------
 p {
   line-height: $line-height-base;
-
-  @extend %base-spacing;
+  margin-bottom: $spacing-medium;
 }
 
 a {

@@ -33,7 +33,7 @@ $link-hover-decoration:        underline !default;
 // ----------------------------------
 $font-family-base:             -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif !default;
 // Font size of the root html
-$font-size-root:               62.5%;
+$font-size-root:               62.5% !default;
 // 1.4rem == 14px
 $font-size-base:               1.4rem !default;
 
@@ -48,7 +48,14 @@ $line-height-base:             1.5 !default;
 
 // $Iconography
 // ----------------------------------
-$icon-font-path: "~/../../../../assets/fonts/";
+$icon-font-path:               "~/../../../../assets/fonts/" !default;
+
+// Spacing
+// ----------------------------------
+$spacing-small:                .5rem !default;
+$spacing-medium:               1rem !default;
+$spacing-large:                2rem !default;
+$spacing-none:                 0 !default;
 
 // $Screen breakpoints
 // Adapting to different screen sizes, for use in media queries
@@ -58,7 +65,7 @@ $screen-breakpoints-md: 992px      !default;
 $screen-breakpoints-lg: 1200px     !default;
 
 // Components
-// ----------------------------------
+// --------------------------------------------------
 
 
 // Nav
@@ -100,7 +107,3 @@ $p-font-size:                  1.6rem !default;
 $p-margin-bottom:              2.5rem !default;
 $p-line-height:                1.7 !default;
 $p-font-weight:                400 !default;
-
-// Whitespace
-// ----------------------------------
-$baseSpacing:                  1.5rem !default;
