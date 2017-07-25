@@ -15,7 +15,7 @@
 .container {
   display: flex;
   margin: 0 2rem;
-  max-width: $content-max-width;
+  @include sizing(maxw-md);;
   margin-top: 3rem;
 }
 

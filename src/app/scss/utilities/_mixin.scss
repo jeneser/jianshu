@@ -135,29 +135,6 @@
   }
 }
 
-// Image package
-// Usage: image-package
-// ----------------------------------
-@mixin image-package {
-  width: 70rem;
-  margin-left: -4rem;
-  text-align: center;
-
-  .image-package__alt {
-    max-width: 100%;
-    vertical-align: middle;
-    cursor: zoom-in;
-  }
-
-  .image-package__alt {
-    display: inline-block;
-    min-width: 20%;
-    max-width: 80%;
-    border-bottom: .1rem solid #d9d9d9;
-    color: $gray-light;
-  }
-}
-
 // Display
 // @param $arg - display
 // Usage: display(flex)

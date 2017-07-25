@@ -2,6 +2,7 @@
 // ----------------------------------
 @import "../../scss/utilities/index";
 
+
 // Home
 .home {
   @include flex-box(
@@ -14,7 +15,7 @@
 // Index
 .index {
   @include flex-box(d-flex);
-  @include sizing(maxw-md);
+  @include sizing(maxw-lg);
   @include spacing(py-4, my-4);
 }
 

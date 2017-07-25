@@ -6,14 +6,14 @@
 @mixin make-grid($infix: md, $columns: 24) {
 	// col
 	@for $i from 1 through $columns {
-		.col-#{$infix}-#{$i} {
-			width: $i * (100/$columns);
+		%col-#{$infix}-#{$i} {
+			width: percentage($i / $columns);
 		}
 	}
 	// offset col
 	@for $i from 1 through $columns {
-		.col-#{$infix}-offset-#{$i} {
-			margin-left: $i * (100/$columns);
+		%col-#{$infix}-offset-#{$i} {
+			margin-left: percentage($i / $columns);
 		}
 	}
 }

@@ -165,11 +165,21 @@ $p-font-weight:                400 !default;
 // --------------------------------------------------
 
 
-// Home
-// Dir: src/app/pages/home
+// $Note
+// Dir: src/app/pages/note
 // ----------------------------------
-// @prop Home page Minimum width
-$home-min-width:               ;
-// @prop Index container Maximum width
-$index-max-width:              96rem !default;
+
+// @prop Post content width
+$note-post-width:              62rem !default;
+
+// @prop Paragraph spacing
+$article-paragraph-spacing:       2.5rem !default;
+// @prop Paragraph fontSize
+$article-paragraph-fontSize:      1.6rem !default;
+// @prop Paragraph fontSize
+$article-paragraph-color:         $gray-darker;
+// @prop Notebook fontSize
+$notebook-name-fontSize:          $font-size-h6;
+// @prop Notebook fontSize
+$notebook-name-color:             rgba($gray-dark, .5);
 
