@@ -1,86 +1,67 @@
-// Spacing
-// @source - https://github.com/stubbornella/oocss/blob/master/oocss/src/components/whitespace/_whitespace.scss
+// Spacing Shorthand placeholder
+// @source - https://v4-alpha.getbootstrap.com/utilities/spacing/
 // ----------------------------------
 
-// p, m = padding, margin
-// a, t, r, b, l, h, v = all, top, right, bottom, left, horizontal, vertical
-// s, m, l, n = $spacing-small(.5rem), $spacing-medium(1rem), $spacing-large(2rem), $spacing-none(0)
-$whitespace-keys: (
-  p padding,
-  m margin,
-  a '',
-  v -top -bottom,
-  h -left -right,
-  t -top,
-  r -right,
-  b -bottom,
-  l -left
-);
 
-// Should be used to modify the default spacing between objects (not between nodes of the same object)
-// <type><location><size>
-@function expand-whitespace-key($k) {
-  @each $pair in $whitespace-keys {
-    $short: nth($pair, 1);
-    $long: nth($pair, 2);
-    // v and h need to pass in 2 parameters
-    @if (length($pair) == 3) {
-      $long: (nth($pair, 2) nth($pair, 3));
+// Margin and Padding
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x: map-get($lengths, x);
+    $length-y: map-get($lengths, y);
+
+    %#{$abbrev}-#{$size} {
+      #{$prop}: $length-y $length-x;
     }
-    @if $short == $k {
-      @return $long;
+    %#{$abbrev}t-#{$size} {
+      #{$prop}-top: $length-y;
     }
-  }
-  @warn "Couldn't expand #{$k}";
-  @return $k;
-}
-
-
-// Can define your own spacing units, or calculate the units based on how many spacing sizes you want
-// @param $units - specific spacing units you want to use. Must go from small to large
-// e.g. @include whitespace((5px,10px,20px));
-// @param $sizes - how many sizes you want. Calculate sizes based on line-height
-// e.g. @include whitespace((), 4);
-@mixin whitespace($units: (), $sizes: 4) {
-  $tShirtSizes: (n, s, m, l, xl);
-  $types: (p, m);
-  $locations: (a, v, h, t, r, b, l);
-  $fontHeight: ($font-size-base/1px) * $line-height-base;
-
-  //if user didn't define their own spacing units
-  @if length($units) == 0 {
-    @for $i from 1 through $sizes {
-      $unit: (round($fontHeight/$i))+px;
-      //calculate unit base on fraction of font height
-      $units: join($unit, $units);
+    %#{$abbrev}r-#{$size} {
+      #{$prop}-right: $length-x;
     }
-  }
-  $units: join(0, $units);
-
-  // @debug $units;
-  @for $i from 1 through length($units) {
-    $tShirtSize: nth($tShirtSizes, $i);
-
-    @each $location in $locations {
-      @each $type in $types {
-        %#{$type}#{$location}#{$tShirtSize} {
-          @each $whitespace-location in expand-whitespace-key($location) {
-            #{expand-whitespace-key($type)}#{$whitespace-location}: nth(
-              $units,
-              $i
-            );
-          }
-        }
-      }
+    %#{$abbrev}b-#{$size} {
+      #{$prop}-bottom: $length-y;
+    }
+    %#{$abbrev}l-#{$size} {
+      #{$prop}-left: $length-x;
+    }
+    %#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length-x;
+      #{$prop}-left: $length-x;
+    }
+    %#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length-y;
+      #{$prop}-bottom: $length-y;
     }
   }
 }
 
-// Generating spacing placeholder
-@include whitespace((.5rem, 1rem, 2rem), 4);
+// Some special margin utils
+%m-auto {
+  margin: auto;
+}
 
-// negative(-)
-%-mhs {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+%mt-auto {
+  margin-top: auto;
+}
+
+%mr-auto {
+  margin-right: auto;
+}
+
+%mb-auto {
+  margin-bottom: auto;
+}
+
+%ml-auto {
+  margin-left: auto;
+}
+
+%mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }

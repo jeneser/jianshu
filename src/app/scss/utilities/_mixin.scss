@@ -1,3 +1,61 @@
+// Mixins
+// --------------------------------------------------
+
+
+// Spacing
+// --------------------------------------------------
+
+// $Spacing
+// @param $spacers - spacers list
+// Usage: spacing(mt-0, px-1)
+// ----------------------------------
+@mixin spacing($spacers...) {
+  @each $spacer in $spacers {
+    @extend %#{$spacer};
+  }
+}
+
+// $Spacing-custom
+// @param $type - spacing type, margin, padding
+// @param $top $right $bottom $left - values
+// Usage: spacing-custom(padding, 1rem, $left: 1rem)
+// ----------------------------------
+@mixin spacing-custom($type, $top: null, $right: null, $bottom: null, $left: null) {
+	#{$type}-top: $top;
+	#{$type}-right: $right;
+	#{$type}-bottom: $bottom;
+	#{$type}-left: $left;
+}
+
+
+// Sizing
+// --------------------------------------------------
+
+
+// $Sizing
+// @param $size - sizes list
+// Usage: sizing(w-25, w-100)
+// ----------------------------------
+@mixin sizing($sizes...) {
+  @each $size in $sizes {
+    @extend %#{$size};
+  }
+}
+
+// $Sizing-custom
+// @param $width - width
+// @param $height - height
+// Usage: sizing-custom(2rem)
+// ----------------------------------
+@mixin sizing-custom($width: null, $height: null) {
+  width: $width;
+  height: $height;
+}
+
+
+// --------------------------------------------------
+
+
 // Reset form input border radius
 @mixin form-border-radius($elem, $nth, $dir) {
   #{$elem}:nth-child(#{$nth}) {
@@ -93,16 +151,6 @@
   align-content: $align-content;
 }
 
-// Spacing
-// @param $args - args list
-// Usage: spacing(ptl, mtl)
-// ----------------------------------
-@mixin spacing($args...) {
-  @each $space in $args {
-    @extend %#{$space};
-  }
-}
-
 // Grid
 // @param $args - args list
 // Usage: grid(col-sm-7, col-sm-offset-1)
@@ -196,9 +244,19 @@
   border-radius: $radius;
 }
 
+// $Button size
+// ----------------------------------
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
+}
+
+// $Generates placeholders
+// ----------------------------------
+@mixin generate-placeholder($property, $from: 0, $to: 0, $symbol: null, $unit: 'rem') {
+	@for $i from $from through $to {
+		.#{$symbol}#{$property}-#{$i} { #{$property}: #{$symbol}#{$i}#{$unit}; }
+	}
 }

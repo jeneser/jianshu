@@ -1,46 +1,25 @@
-// Note post content width
-%post-content-width {
-  width: $post-limit-width;
+// Sizing
+// @source - https://v4-alpha.getbootstrap.com/utilities/sizing/
+// ----------------------------------
+
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $size, $length in $sizes {
+   %#{$abbrev}-#{$size} {
+      #{$prop}: $length;
+    }
+  }
 }
 
-@mixin width($value: auto) {
-  width: $value;
+// Some special sizes
+%mw-100 {
+  max-width: 100%;
 }
 
-@mixin height($value: auto) {
-  height: $value;
+%mh-100 {
+  max-height: 100%;
 }
 
-@mixin size($wValue: auto, $hValue: auto) {
-  width: $wValue;
-  height: $hValue;
-}
-
-%size-fill {
+%wh-100 {
   width: 100%;
   height: 100%;
-}
-
-%size-fill-horizontal {
-  width: 100%;
-}
-
-%size-fill-vertical {
-  height: 100%;
-}
-
-%size1of1 {
-  width: 100%;
-}
-
-%size1of2 {
-  width: 50%;
-}
-
-%size1of3 {
-  width: 33.33333%;
-}
-
-%size2of3 {
-  width: 66.66667%;
 }

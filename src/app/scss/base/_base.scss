@@ -1,9 +1,9 @@
 // Base Rules
 // --------------------------------------------------
 
+
 // App Structure
 // ----------------------------------
-
 * {
   box-sizing: border-box;
 }
@@ -36,7 +36,6 @@ body {
 
 // Font size of heading
 // ----------------------------------
-
 $headings: (
   h1: $font-size-h1,
   h2: $font-size-h2,
@@ -56,7 +55,7 @@ $headings: (
 // ----------------------------------
 p {
   line-height: $line-height-base;
-  margin-bottom: $spacing-medium;
+  margin-bottom: $spacer;
 }
 
 a {

@@ -52,17 +52,54 @@ $icon-font-path:               "~/../../../../assets/fonts/" !default;
 
 // Spacing
 // ----------------------------------
-$spacing-small:                .5rem !default;
-$spacing-medium:               1rem !default;
-$spacing-large:                2rem !default;
-$spacing-none:                 0 !default;
+$spacer:                       1rem !default;
+$spacer-x:                     $spacer !default;
+$spacer-y:                     $spacer !default;
+
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  2: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  3: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  4: (
+    x: ($spacer-x * 2),
+    y: ($spacer-y * 2)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;
+
+// Sizes
+// ----------------------------------
+$sizes: (
+  25: 25%,
+  33: 33.33333%,
+  50: 50%,
+  66: 66.66667%,
+  75: 75%,
+  100: 100%
+) !default;
 
 // $Screen breakpoints
 // Adapting to different screen sizes, for use in media queries
 // ----------------------------------
-$screen-breakpoints-sm: 768px      !default;
-$screen-breakpoints-md: 992px      !default;
-$screen-breakpoints-lg: 1200px     !default;
+$screen-breakpoints-sm:        768px !default;
+$screen-breakpoints-md:        992px !default;
+$screen-breakpoints-lg:        1200px !default;
 
 // Components
 // --------------------------------------------------
