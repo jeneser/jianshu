@@ -78,6 +78,10 @@ $spacers: (
     y: ($spacer-y * 2)
   ),
   5: (
+    x: ($spacer-x * 2.5),
+    y: ($spacer-y * 2.5)
+  ),
+  6: (
     x: ($spacer-x * 3),
     y: ($spacer-y * 3)
   )
@@ -94,12 +98,26 @@ $sizes: (
   100: 100%
 ) !default;
 
+// $Container max widths
+// ----------------------------------
+$container-max-widths: (
+  sm: 54rem,
+  md: 72rem,
+  lg: 96rem,
+  xl: 114rem
+) !default;
+
 // $Screen breakpoints
 // Adapting to different screen sizes, for use in media queries
 // ----------------------------------
-$screen-breakpoints-sm:        768px !default;
-$screen-breakpoints-md:        992px !default;
-$screen-breakpoints-lg:        1200px !default;
+$screen-breakpoints: (
+  xs: 0,
+  sm: 57.6rem,
+  md: 76.8rem,
+  lg: 99.2rem,
+  xl: 120rem
+) !default;
+
 
 // Components
 // --------------------------------------------------
@@ -110,10 +128,6 @@ $screen-breakpoints-lg:        1200px !default;
 $nav-bar-height:               5.6rem !default;
 $nav-bar-min-width:            76.8rem !default;
 $nav-bar-max-width:            144rem !default;
-
-// Content
-// ----------------------------------
-$content-max-width:            96rem !default;
 
 // Btn
 // ----------------------------------
@@ -144,3 +158,18 @@ $p-font-size:                  1.6rem !default;
 $p-margin-bottom:              2.5rem !default;
 $p-line-height:                1.7 !default;
 $p-font-weight:                400 !default;
+
+
+// Pages
+// Dir: src/app/pages
+// --------------------------------------------------
+
+
+// Home
+// Dir: src/app/pages/home
+// ----------------------------------
+// @prop Home page Minimum width
+$home-min-width:               ;
+// @prop Index container Maximum width
+$index-max-width:              96rem !default;
+

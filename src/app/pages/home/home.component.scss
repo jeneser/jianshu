@@ -2,42 +2,34 @@
 // ----------------------------------
 @import "../../scss/utilities/index";
 
-// Props
-// ----------------------------------
-
-// @prop Home page Minimum width
-$home-min-width:       $screen-breakpoints-sm;
-// @prop Index container Maximum width
-$index-max-width:      $content-max-width;
-
-// Rules
-// ----------------------------------
-
 // Home
 .home {
-  @extend %flex-center-horizontal;
-
-  min-width: $home-min-width;
+  @include flex-box(
+    d-flex,
+    justify-content-center
+  );
+  @include sizing(minw-md);
 }
 
 // Index
 .index {
-  @include spacing(pvl, mvl);
-  @include flex-box;
-
-  max-width: $index-max-width;
+  @include flex-box(d-flex);
+  @include sizing(maxw-md);
+  @include spacing(py-4, my-4);
 }
 
 // Main
 .main {
-  @include grid(col-sm-16);
+  @include grid(col-md-16);
 }
 
 .main__split-line {
-  @extend %separator;
+  @include atoms(
+    separator
+  );
 }
 
 // Aside
 .aside {
-  @include grid(col-sm-7, col-sm-offset-1);
+  @include grid(col-md-7, col-md-offset-1);
 }

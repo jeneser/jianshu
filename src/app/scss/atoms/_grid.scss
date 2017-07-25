@@ -2,21 +2,21 @@
 // --------------------------------------------------
 
 
-@mixin make-grid-columns($columns: 24) {
+// Make grid placehold
+@mixin make-grid($infix: md, $columns: 24) {
+	// col
 	@for $i from 1 through $columns {
-		.col-#{$i} {
+		.col-#{$infix}-#{$i} {
 			width: $i * (100/$columns);
 		}
 	}
-}
-
-@mixin make-grid-columns-offset($columns: 24) {
+	// offset col
 	@for $i from 1 through $columns {
-		.col-offset-#{$i} {
+		.col-#{$infix}-offset-#{$i} {
 			margin-left: $i * (100/$columns);
 		}
 	}
 }
 
-@include make-grid-columns();
-@include make-grid-columns-offset();
+@include make-grid(md);
+

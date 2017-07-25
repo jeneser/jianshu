@@ -2,12 +2,27 @@
 // @source - https://v4-alpha.getbootstrap.com/utilities/sizing/
 // ----------------------------------
 
+// %#{$abbrev}-#{$size}
 @each $prop, $abbrev in (width: w, height: h) {
   @each $size, $length in $sizes {
    %#{$abbrev}-#{$size} {
       #{$prop}: $length;
     }
   }
+}
+
+// %maxw-#{$prop}
+@each $prop, $value in $container-max-widths {
+  %maxw-#{$prop} {
+    max-width: $value;
+  };
+}
+
+// %minw-#{$prop}
+@each $prop, $value in $screen-breakpoints {
+  %minw-#{$prop} {
+    min-width: $value;
+  };
 }
 
 // Some special sizes

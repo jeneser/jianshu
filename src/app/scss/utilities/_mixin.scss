@@ -2,6 +2,19 @@
 // --------------------------------------------------
 
 
+// Atoms
+// --------------------------------------------------
+
+
+// $Atoms
+// Extend atoms placeholder
+@mixin atoms($collection...) {
+	@each $el in $collection {
+		@extend %#{$el};
+	}
+}
+
+
 // Spacing
 // --------------------------------------------------
 
@@ -53,7 +66,32 @@
 }
 
 
+// Grid
 // --------------------------------------------------
+
+
+// $Grid
+// @param $cols - column list
+// Usage: grid(col-md-7, col-md-offset-1)
+// ----------------------------------
+@mixin grid($cols...) {
+  @each $col in $cols {
+    @extend %#{$col};
+  }
+}
+
+
+// Flex
+// --------------------------------------------------
+
+
+// $Flex box
+// @param $arg - display
+// Usage: display(flex)
+// ----------------------------------
+@mixin flex-box($utilities...) {
+  @include atoms($utilities...);
+}
 
 
 // Reset form input border radius
@@ -135,30 +173,6 @@
 @mixin justify-content($arg) {
   @include display(flex);
   justify-content: $arg;
-}
-
-// Flex box
-// @param $arg - display
-// Usage: display(flex)
-// ----------------------------------
-@mixin flex-box($flex: flex, $justify-content: null, $align-items: null, $direction: null, $wrap: null, $flow: null, $align-content: null) {
-  display: $flex;
-  justify-content: $justify-content;
-  align-items: $align-items;
-  flex-direction: $direction;
-  flex-wrap: $wrap;
-  flex-flow: $flow;
-  align-content: $align-content;
-}
-
-// Grid
-// @param $args - args list
-// Usage: grid(col-sm-7, col-sm-offset-1)
-// ----------------------------------
-@mixin grid($args...) {
-  @each $col in $args {
-    @extend %#{$col};
-  }
 }
 
 // Border
