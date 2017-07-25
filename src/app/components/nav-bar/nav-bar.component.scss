@@ -54,7 +54,7 @@
   a {
     display: block;
     padding: $btn-default-padding-left;
-    font-size: $font-size-h4;
+    @include font-size(h4);
     color: $gray-dark;
   }
 

@@ -23,7 +23,7 @@
     a {
       width: 33.33%;
       padding: 0 1rem;
-      font-size: $font-size-h5;
+      @include font-size(h5);
       color: $body-bg;
       text-align: center;
       line-height: 3rem;

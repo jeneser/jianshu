@@ -12,9 +12,10 @@ $gray-light:            lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
 
 $primary:               #ea6f5a !default;
-$secondary:             #00bb29 !default;
-$balanced:              #498ad5 !default;
-$danger:                #f53d3d !default;
+$brand-success:         #00bb29 !default;
+$brand-info:            #498ad5 !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #f53d3d !default;
 
 // $Scaffolding
 // ----------------------------------
@@ -37,14 +38,16 @@ $font-size-root:               62.5% !default;
 // 1.4rem == 14px
 $font-size-base:               1.4rem !default;
 
-$font-size-h1:                 3.6rem !default;
-$font-size-h2:                 3rem !default;
-$font-size-h3:                 2.4rem !default;
-$font-size-h4:                 1.8rem !default;
-$font-size-h5:                 1.4rem !default;
-$font-size-h6:                 1.2rem !default;
-
 $line-height-base:             1.5 !default;
+
+$headings: (
+  h1:                          3.6rem,
+  h2:                          3rem,
+  h3:                          2.4rem,
+  h4:                          1.8rem,
+  h5:                          $font-size-base,
+  h6:                          1.2rem
+) !default;
 
 // $Iconography
 // ----------------------------------
@@ -171,15 +174,4 @@ $p-font-weight:                400 !default;
 
 // @prop Post content width
 $note-post-width:              62rem !default;
-
-// @prop Paragraph spacing
-$article-paragraph-spacing:       2.5rem !default;
-// @prop Paragraph fontSize
-$article-paragraph-fontSize:      1.6rem !default;
-// @prop Paragraph fontSize
-$article-paragraph-color:         $gray-darker;
-// @prop Notebook fontSize
-$notebook-name-fontSize:          $font-size-h6;
-// @prop Notebook fontSize
-$notebook-name-color:             rgba($gray-dark, .5);
 

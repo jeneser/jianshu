@@ -4,13 +4,6 @@
   border-top: .1rem solid rgba($gray-light, .2);
 }
 
-// Ellipsis
-%ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 // Responsive image
 %img-responsive {
   max-width: 100%;

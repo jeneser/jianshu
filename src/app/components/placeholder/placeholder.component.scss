@@ -96,7 +96,7 @@
     }
 
     .meta {
-      font-size: $font-size-h6;
+      @include font-size(h6);
       color: rgba($gray-light, .23);
 
       i {

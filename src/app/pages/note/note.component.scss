@@ -27,9 +27,8 @@
   // TODO: Need Refactor when api joined
   p {
     @include spacing(mb-5);
-
-    font-size: $article-paragraph-fontSize;
-    color: $article-paragraph-color;
+    @include font-size(fs-16);
+    @include colors(text-gray-darker);
   }
 }
 
@@ -52,8 +51,8 @@
 .notebook__icon,
 .notebook__name,
 .rights {
-  font-size: $notebook-name-fontSize;
-  color: $notebook-name-color;
+  @include colors(text-gray-lighter);
+  @include font-size(h6);
 }
 
 // Rights
@@ -65,31 +64,29 @@
 .follow-detail {
   @include spacing(p-4);
   @include border(all, .1rem solid #e1e1e1, $rad: $btn-default-border-radius);
-
-  background-color: rgba($gray-light, .05);
-  font-size: $font-size-h6;
+  @include font-size(h6);
+  @include colors(bg-gray-lighter);
 }
 
 .follow-detail__signature {
   @include spacing(pt-4, mt-4);
   @include border(top, .1rem solid #e1e1e1);
-  @extend %ellipsis;
-
-  color: $gray-light;
+  @include text(text-truncate);
+  @include colors(text-gray-light);
 }
 
 // Support author
 .support-author {
   @include spacing(py-4, mt-5);
   @include border(bottom, .1rem solid #f0f0f0);
-  @include inline-alignment($text: center);
+  @include text(text-center);
 }
 
 .support-author__show {
   @include spacing(px-4, mx-5, mb-4);
+  @include font-size(fs-17);
 
   min-height: 2.4rem;
-  font-size: 1.7rem;
 }
 
 .support-author__pay {
@@ -105,15 +102,15 @@
 }
 
 .supporter__item {
-  @include display(inline-block);
+  @include display(d-inline-block);
+
   // @include spacing(-mhs);
 }
 
 .supporter__avatar {
-  @include display(block);
+  @include display(d-block);
+  @include sizing-custom(4rem, 4rem);
 
-  width: 4rem;
-  height: 4rem;
   cursor: pointer;
 }
 
@@ -158,44 +155,43 @@
   @include spacing(ml-1);
   @include inline-alignment($text: center, $vertical: middle);
   @include border(all, .1rem solid #dcdcdc, 50%);
+  @include sizing-custom(5rem, 5rem);
 
   &:hover {
-    background-color: hsla(0,0%,71%,.1);
+    @include colors(bg-gray-lighter);
   }
 
-  width: 5rem;
-  height: 5rem;
   cursor: pointer;
 }
 
 .share__icon {
   @include spacing(mt-5);
+  @include font-size(fs-24);
 
-  font-size: 2.4rem;
   line-height: 2;
 }
 
 // Iconfont
 .ic-wechat {
-  color: $secondary;
+  @include colors(text-success);
 }
 
 .ic-weibo {
-  color: $primary;
+  @include colors(text-primary);
 }
 
 .ic-picture {
-  color: $balanced;
+  @include colors(text-info);
 }
 
 .share__item_more {
   @extend .share__item;
   @include spacing(py-1, px-4);
   @include border-radius(5rem);
+  @include font-size(fs-14);
+  @include colors(text-gray-light);
+  @include sizing(w-auto);
 
-  width: auto;
-  font-size: 1.4rem;
-  color: #9b9b9b;
   line-height: 4rem;
 }
 
@@ -207,6 +203,7 @@
     flex-column
   );
   @include spacing(py-4);
+  // @include colors();
 
   min-height: 21.3rem;
   background-color: #f5f5f5;
@@ -217,15 +214,14 @@
 // Bottom main
 .bottom-main {
   @include spacing(pb-4);
-
   @include sizing-custom($note-post-width);
 }
 
 // Meta
 .meta {
   @include spacing(pb-5, mb-1);
+  @include font-size(h4);
 
-  font-size: 1.5rem;
   color: #a0a0a0;
 }
 

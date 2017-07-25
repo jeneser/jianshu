@@ -9,7 +9,7 @@
   height: 100%;
   min-height: $nav-bar-min-width;
   text-align: center;
-  font-size: $font-size-h5;
+  @include font-size(h5);
   background-color: rgba($gray-light, .1);
 }
 
@@ -83,7 +83,7 @@
 
     i {
       @include position(absolute, $top: 1.4rem, $left: 1rem);
-      font-size: $font-size-h4;
+      @include font-size(h4);
       color: $gray-light;
     }
   }
@@ -104,7 +104,7 @@
     padding: 0;
     line-height: 2rem;
     text-align: center;
-    font-size: $font-size-h6;
+    @include font-size(h6);
     color: $gray-light;
 
     a {

@@ -44,7 +44,7 @@
 
         p {
           margin-top: 1rem;
-          font-size: $font-size-h5;
+          @include font-size(h5);
           color: #969696;
         }
       }
@@ -94,7 +94,7 @@
 
   .title {
     margin-bottom: 1rem;
-    font-size: $font-size-h5;
+    @include font-size(h5);
     color: #969696;
   }
 
@@ -122,7 +122,7 @@
     line-height: 3rem;
 
     span {
-      font-size: $font-size-h5;
+      @include font-size(h5);
       vertical-align: middle;
     }
 

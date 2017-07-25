@@ -28,12 +28,12 @@
     display: inline-block;
     padding: 0 1.1rem 0 .6rem;
     vertical-align: middle;
-    font-size: $font-size-h5;
+    @include font-size(h5);
   }
 
   .more {
     line-height: 3.2rem;
-    font-size: $font-size-h5;
+    @include font-size(h5);
     color: $gray-light;
     border: none;
     background-color: $body-bg;
