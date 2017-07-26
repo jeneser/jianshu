@@ -158,6 +158,20 @@
 }
 
 
+// Variant
+// --------------------------------------------------
+
+
+// $Variant
+// @param $variant - variant, Contains the following attributes:
+// background-color border-color color
+// Usage: variant(bg-primary, border-success, color-info)
+// ----------------------------------
+@mixin variant($variant...) {
+  @include atoms($variant...);
+}
+
+
 
 
 // Reset form input border radius

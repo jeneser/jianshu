@@ -25,15 +25,11 @@
   };
 }
 
-// %maxw-#{$prop}
+// %maxw-#{$prop} %minw-#{$prop}
 @for $i from 1 through 10 {
   %maxw-#{$i * 10} {
     max-width: percentage($i / 10);
   }
-}
-
-// %minw-#{$prop}
-@for $i from 1 through 10 {
   %minw-#{$i * 10} {
     max-width: percentage($i / 10);
   }

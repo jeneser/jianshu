@@ -1,0 +1,100 @@
+// Border
+%border-0 {
+  border: 0;
+}
+
+%border-top-0 {
+  border-top: 0;
+}
+
+%border-right-0 {
+  border-right: 0;
+}
+
+%border-bottom-0 {
+  border-bottom: 0;
+}
+
+%border-left-0 {
+  border-left: 0;
+}
+
+// Border width
+@for $i from 1 through 10 {
+  %border-#{$i} {
+    border-width: ($i / 10) + rem;
+  }
+  %border-top-#{$i} {
+    border-top-width: ($i / 10) + rem;
+  }
+  %border-right-#{$i} {
+    border-right-width: ($i / 10) + rem;
+  }
+  %border-bottom-#{$i} {
+    border-bottom-width: ($i / 10) + rem;
+  }
+  %border-left-#{$i} {
+    border-left-width: ($i / 10) + rem;
+  }
+}
+
+// Border-radius
+%rounded {
+  border-radius: $border-radius;
+}
+
+%rounded-top {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+%rounded-right {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+%rounded-bottom {
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+%rounded-left {
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+%rounded-circle {
+  border-radius: 50%;
+}
+
+%rounded-0 {
+  border-radius: 0;
+}
+
+// Border color
+$border-colors: (
+  gray-base: $gray-base,
+  gray-darker: $gray-darker,
+  gray-dark: $gray-dark,
+  gray-light: $gray-light,
+  gray-lighter: $gray-lighter,
+  primary: $primary,
+  success: $brand-success,
+  info: $brand-info,
+  warning: $brand-warning,
+  danger: $brand-danger
+);
+
+@each $parent, $color in $border-colors {
+  %border-#{$parent} {
+    border-color: $color;
+  }
+}
+
+%border-white {
+  border-color: #fff;
+}
+
+%border-gray {
+  border-color: $gray;
+}
