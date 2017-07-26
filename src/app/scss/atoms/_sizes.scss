@@ -25,11 +25,21 @@
   };
 }
 
-// Some special sizes
-%mw-100 {
-  max-width: 100%;
+// %maxw-#{$prop}
+@for $i from 1 through 10 {
+  %maxw-#{$i * 10} {
+    max-width: percentage($i / 10);
+  }
 }
 
+// %minw-#{$prop}
+@for $i from 1 through 10 {
+  %minw-#{$i * 10} {
+    max-width: percentage($i / 10);
+  }
+}
+
+// Some special sizes
 %mh-100 {
   max-height: 100%;
 }

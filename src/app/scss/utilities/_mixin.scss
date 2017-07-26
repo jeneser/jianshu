@@ -145,6 +145,19 @@
 }
 
 
+// Align
+// --------------------------------------------------
+
+
+// $Align
+// @param $align - align
+// Usage: align(align-middle)
+// ----------------------------------
+@mixin align($align) {
+  @include atoms($align);
+}
+
+
 
 
 // Reset form input border radius

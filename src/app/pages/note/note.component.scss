@@ -12,14 +12,9 @@
   @include sizing-custom($note-post-width);
 }
 
-// Article content
-.post-article {
-  @include spacing(pt-4);
-}
-
 // Article author
 .article-author {
-  @include spacing(py-1, mb-4);
+  @include spacing(py-4, mb-4);
 }
 
 // Article content

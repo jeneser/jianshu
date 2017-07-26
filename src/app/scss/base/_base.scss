@@ -45,6 +45,12 @@ body {
 
 // Element base rule
 // ----------------------------------
+
+h1, h2 {
+  margin-top: ($spacer * 2);
+  margin-bottom: $spacer;
+}
+
 p {
   line-height: $line-height-base;
   margin-bottom: $spacer;
