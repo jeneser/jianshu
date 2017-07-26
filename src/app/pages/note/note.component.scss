@@ -143,7 +143,7 @@
 
 .like__btn-modal {
   @include btn(
-    $size: (0, 3rem, $font-size-h4, normal, 0),
+    $size: (0, 3rem, 1.8rem, normal, 0),
     $variant: ($primary, transparent, transparent)
   );
   @include border(left, .1rem solid $primary);
@@ -151,7 +151,7 @@
 
 // Share
 .share__item {
-  @include display(inline-block);
+  @include display(d-block);
   @include spacing(ml-1);
   @include inline-alignment($text: center, $vertical: middle);
   @include border(all, .1rem solid #dcdcdc, 50%);

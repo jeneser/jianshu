@@ -96,7 +96,7 @@
 
   .submit {
     @extend %btn-base;
-    background: $balanced;
+    @include colors(bg-info);
   }
 
   .remember {
@@ -162,7 +162,7 @@
     }
 
     i {
-      font-size: $font-size-h3;
+      @include font-size(h3);
       color: $body-bg;
     }
 
@@ -171,11 +171,11 @@
     }
 
     .weixin {
-      background-color: $secondary;
+      @include colors(bg-success);
     }
 
     .qq {
-      background-color: $balanced;
+      @include colors(bg-info);
     }
 
     .other {

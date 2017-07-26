@@ -53,7 +53,7 @@
     text-align: center;
     @include font-size(h6);
     color: $body-bg;
-    background-color: $secondary;
+    @include colors(bg-success);
     border-radius: 4rem;
   }
 
@@ -81,7 +81,7 @@
   }
 
   .ic-man {
-    color: $balanced;
+    @include colors(text-info);
     font-size: $avatar-name-font-size;
   }
 }
