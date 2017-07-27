@@ -39,28 +39,37 @@
 }
 
 // Border-radius
-%rounded {
-  border-radius: $border-radius;
-}
+$radius-sizes: (
+  base: $border-radius-base,
+  sm: $border-radius-sm,
+  md: $border-radius-md,
+  lg: $border-radius-lg
+);
 
-%rounded-top {
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
-}
+@each $size, $value in $radius-sizes {
+  %rounded-#{$size} {
+    border-radius: $value;
+  }
 
-%rounded-right {
-  border-top-right-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
-}
+  %rounded-top-#{$size} {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  }
 
-%rounded-bottom {
-  border-bottom-left-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
-}
+  %rounded-right-#{$size} {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
 
-%rounded-left {
-  border-top-left-radius: $border-radius;
-  border-bottom-left-radius: $border-radius;
+  %rounded-bottom-#{$size} {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+
+  %rounded-left-#{$size} {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
 }
 
 %rounded-circle {
@@ -98,3 +107,21 @@ $border-colors: (
 %border-gray {
   border-color: $gray;
 }
+
+%border-transparent {
+  border-color: transparent;
+}
+
+// border style
+@each $p in (null, -top, -right, -bottom, -left) {
+  %dotted#{$p} {
+    border#{$p}-style: dotted;
+  }
+  %dashed#{$p} {
+    border#{$p}-style: dashed;
+  }
+  %solid#{$p} {
+    border#{$p}-style: solid;
+  }
+}
+

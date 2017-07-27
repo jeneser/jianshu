@@ -8,8 +8,8 @@ $gray-base:             #000 !default;
 $gray-darker:           lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:             lighten($gray-base, 20%) !default;   // #333
 $gray:                  lighten($gray-base, 60.8%) !default; // #9b9b9b
-$gray-light:            lighten($gray-base, 94%) !default;   // #f0f0f0
-$gray-lighter:          lighten($gray-base, 97%) !default;   // #f7f7f7
+$gray-light:            lighten($gray-base, 86.5%) !default; // #dddddd
+$gray-lighter:          lighten($gray-base, 95%) !default;   // #f7f7f7
 
 $primary:               #ea6f5a !default;
 $brand-success:         #00bb29 !default;
@@ -39,6 +39,8 @@ $font-size-root:               62.5% !default;
 $font-size-base:               1.4rem !default;
 
 $line-height-base:             1.5 !default;
+$line-height-sm:               1 !default;
+$line-height-lg:               2 !default;
 
 $headings: (
   h1:                          3.6rem,
@@ -51,7 +53,10 @@ $headings: (
 
 // $Border
 // ----------------------------------
-$border-radius:                .4rem !default;
+$border-radius-base:            .4rem !default;
+$border-radius-sm:              1rem !default;
+$border-radius-md:              2rem !default;
+$border-radius-lg:              4rem !default;
 
 // $Iconography
 // ----------------------------------

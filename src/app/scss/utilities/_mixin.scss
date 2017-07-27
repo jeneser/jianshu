@@ -172,6 +172,46 @@
 }
 
 
+// Border
+// --------------------------------------------------
+
+
+// $Border
+// @param $border - style, width, radius
+// Usage: border(border-1, border-solid, rounded)
+// ----------------------------------
+@mixin border($border...) {
+  @include atoms($border...);
+}
+
+
+
+// Button
+// --------------------------------------------------
+
+
+// %Button
+// @param $size - button size
+// @param $variant - button variant
+// Usage:
+// btn(
+//   $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
+//   $variant: (#fff, $primary, $primary));
+// ----------------------------------
+@mixin button($size: null, $variant: null) {
+  @extend %btn-base;
+
+  @include atoms($size...);
+  @include variant($variant...);
+
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 
 // Reset form input border radius
@@ -224,26 +264,6 @@
   justify-content: $arg;
 }
 
-// Border
-// @param $props - $props list
-// @param $args - args list
-// @param $rad - border radius
-// Usage: border(top left right, .1rem solid #e1e1e1, $rad: 4rem)
-// Usage: border(all, .1rem solid #e1e1e1)
-// ----------------------------------
-@mixin border($props, $args, $rad: null) {
-  @if $props == all {
-    border: $args;
-  } @else {
-    @each $prop in $props {
-      border-#{$prop}: $args;
-    }
-  }
-  @if $rad != null {
-    border-radius: $rad;
-  }
-}
-
 // Inline-alignment
 // @param $arg - text(text-align)
 // @param $vertical - vertical(vertical-align)
@@ -259,45 +279,6 @@
   @if $vertical != null {
     vertical-align: $vertical;
   }
-}
-
-// Button
-// @param $size - button size
-// @param $variant - button variant
-// Usage:
-// btn(
-//   $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
-//   $variant: (#fff, $primary, $primary));
-// ----------------------------------
-@mixin btn($size: null, $variant: null) {
-  @extend %btn-base;
-  @if $size != null {
-    @include btn-size($size...);
-  }
-  @if $variant != null {
-    @include btn-variant($variant...);
-  }
-
-  cursor: pointer;
-}
-
-// Button sizes
-// Usage: btn-size(0, 2.5rem, 1.6rem, 3.8rem, .4rem)
-// ----------------------------------
-@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
-}
-
-// Button variants
-// Usage: btn-variant(#fff, $primary, $primary)
-// ----------------------------------
-@mixin btn-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
 }
 
 // Border radius

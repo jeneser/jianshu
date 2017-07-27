@@ -8,29 +8,32 @@
   @each $size, $lengths in $spacers {
     $length-x: map-get($lengths, x);
     $length-y: map-get($lengths, y);
+    $symbols: (positive: null, negative: '-');
 
-    %#{$abbrev}-#{$size} {
-      #{$prop}: $length-y $length-x;
-    }
-    %#{$abbrev}t-#{$size} {
-      #{$prop}-top: $length-y;
-    }
-    %#{$abbrev}r-#{$size} {
-      #{$prop}-right: $length-x;
-    }
-    %#{$abbrev}b-#{$size} {
-      #{$prop}-bottom: $length-y;
-    }
-    %#{$abbrev}l-#{$size} {
-      #{$prop}-left: $length-x;
-    }
-    %#{$abbrev}x-#{$size} {
-      #{$prop}-right: $length-x;
-      #{$prop}-left: $length-x;
-    }
-    %#{$abbrev}y-#{$size} {
-      #{$prop}-top: $length-y;
-      #{$prop}-bottom: $length-y;
+    @each $symbol, $short in $symbols {
+      %#{$short}#{$abbrev}-#{$size} {
+        #{$prop}: #{$short}#{$length-y} #{$short}#{$length-x};
+      }
+      %#{$short}#{$abbrev}t-#{$size} {
+        #{$prop}-top: #{$short}#{$length-y};
+      }
+      %#{$short}#{$abbrev}r-#{$size} {
+        #{$prop}-right: #{$short}#{$length-x};
+      }
+      %#{$short}#{$abbrev}b-#{$size} {
+        #{$prop}-bottom: #{$short}#{$length-y};
+      }
+      %#{$short}#{$abbrev}l-#{$size} {
+        #{$prop}-left: #{$short}#{$length-x};
+      }
+      %#{$short}#{$abbrev}x-#{$size} {
+        #{$prop}-right: #{$short}#{$length-x};
+        #{$prop}-left: #{$short}#{$length-x};
+      }
+      %#{$short}#{$abbrev}y-#{$size} {
+        #{$prop}-top: #{$short}#{$length-y};
+        #{$prop}-bottom: #{$short}#{$length-y};
+      }
     }
   }
 }

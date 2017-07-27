@@ -23,7 +23,7 @@
   p {
     @include spacing(mb-5);
     @include font-size(fs-16);
-    @include colors(text-gray-darker);
+    @include variant(text-gray-darker);
   }
 }
 
@@ -46,8 +46,8 @@
 .notebook__icon,
 .notebook__name,
 .rights {
-  @include colors(text-gray-lighter);
   @include font-size(h6);
+  @include variant(text-gray);
 }
 
 // Rights
@@ -58,36 +58,35 @@
 // Detail author
 .follow-detail {
   @include spacing(p-4);
-  @include border(all, .1rem solid #e1e1e1, $rad: $btn-default-border-radius);
   @include font-size(h6);
-  @include colors(bg-gray-lighter);
+  @include border(border-1, solid, rounded-base);
+  @include variant(bg-gray-lighter, border-gray-light);
 }
 
 .follow-detail__signature {
   @include spacing(pt-4, mt-4);
-  @include border(top, .1rem solid #e1e1e1);
   @include text(text-truncate);
-  @include colors(text-gray-light);
+  @include border(border-top-1, solid-top);
+  @include variant(text-gray, border-gray-light);
 }
 
 // Support author
 .support-author {
   @include spacing(py-4, mt-5);
-  @include border(bottom, .1rem solid #f0f0f0);
   @include text(text-center);
+  @include border(border-bottom-2, solid-bottom);
+  @include variant(border-gray-lighter);
 }
 
 .support-author__show {
   @include spacing(px-4, mx-5, mb-4);
   @include font-size(fs-17);
-
-  min-height: 2.4rem;
 }
 
 .support-author__pay {
-  @include btn(
-    $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
-    $variant: (#fff, $primary, $primary)
+  @include button(
+    $size: (py-0, px-5, fs-16, line-height-38, rounded-base),
+    $variant: (text-white, bg-primary, border-primary)
   );
 }
 
@@ -98,20 +97,18 @@
 
 .supporter__item {
   @include display(d-inline-block);
-
-  // @include spacing(-mhs);
+  @include spacing(-mx-1);
 }
 
 .supporter__avatar {
   @include display(d-block);
   @include sizing-custom(4rem, 4rem);
-
-  cursor: pointer;
 }
 
 .supporter__img {
-  @extend %img-responsive;
-  @include border(all, .3rem solid #fff, $rad: 50%);
+  @include atoms(image-fluid);
+  @include border(border-3, solid, rounded-circle);
+  @include variant(border-white);
 }
 
 // Meta bottom
@@ -126,68 +123,72 @@
 
 // Like
 .like__btn-group {
-  @include border(all, .1rem solid $primary, 4rem);
+  @include border(border-1, solid, rounded-lg);
+  @include variant(border-primary);
 }
 
 .like__btn-like {
-  @include btn(
-    $size: (1.5rem, 3rem, 1.9rem, normal, 0),
-    $variant: ($primary, transparent, transparent)
+  @include button(
+    $size: (py-4, px-5, fs-19),
+    $variant: (text-primary, bg-transparent, border-transparent)
   );
 }
 
 .like__btn-modal {
-  @include btn(
-    $size: (0, 3rem, 1.8rem, normal, 0),
-    $variant: ($primary, transparent, transparent)
+  @include button(
+    $size: (px-5, fs-18),
+    $variant: (text-primary)
   );
-  @include border(left, .1rem solid $primary);
+  @include border(border-left-1, solid-left);
+  @include variant(border-primary);
 }
 
 // Share
-.share__item {
-  @include display(d-block);
+%share__item {
+  @include atoms(
+    text-center,
+    align-middle,
+    cursor-pointer
+  );
+  @include display(d-inline-block);
   @include spacing(ml-1);
-  @include inline-alignment($text: center, $vertical: middle);
-  @include border(all, .1rem solid #dcdcdc, 50%);
+  @include variant(text-gray, border-gray-light);
+}
+
+.share__item {
+  @extend %share__item;
+
   @include sizing-custom(5rem, 5rem);
-
-  &:hover {
-    @include colors(bg-gray-lighter);
-  }
-
-  cursor: pointer;
+  @include border(border-1, solid, rounded-circle);
 }
 
 .share__icon {
+  @include atoms(line-height-lg);
   @include spacing(mt-5);
   @include font-size(fs-24);
-
-  line-height: 2;
 }
 
 // Iconfont
 .ic-wechat {
-  @include colors(text-success);
+  @include variant(text-success);
 }
 
 .ic-weibo {
-  @include colors(text-primary);
+  @include variant(text-primary);
 }
 
 .ic-picture {
-  @include colors(text-info);
+  @include variant(text-info);
 }
 
 .share__item_more {
-  @extend .share__item;
-  @include spacing(py-1, px-4);
-  @include border-radius(5rem);
-  @include font-size(fs-14);
-  @include colors(text-gray-light);
-  @include sizing(w-auto);
+  @extend %share__item;
 
-  line-height: 4rem;
+  @include atoms(line-height-40);
+  @include sizing(w-auto);
+  @include spacing(py-1, px-4);
+  @include font-size(fs-14);
+  @include border(border-1, solid, rounded-lg);
 }
 
 // Bottom
@@ -197,13 +198,8 @@
     align-items-center,
     flex-column
   );
-  @include spacing(py-4);
-  // @include colors();
-
-  min-height: 21.3rem;
-  background-color: #f5f5f5;
-  // padding-top: 4rem;
-  // padding-bottom: 4rem;
+  @include spacing(py-6);
+  @include variant(bg-gray-lighter);
 }
 
 // Bottom main
@@ -216,8 +212,7 @@
 .meta {
   @include spacing(pb-5, mb-1);
   @include font-size(h4);
-
-  color: #a0a0a0;
+  @include variant(text-gray);
 }
 
 // Recommend note
