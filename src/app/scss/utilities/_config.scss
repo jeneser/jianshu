@@ -184,3 +184,16 @@ $p-font-weight:                400 !default;
 // @prop Post content width
 $note-post-width:              62rem !default;
 
+// $Collection
+// src/app/pages/collection
+// ----------------------------------
+
+// @prop Avatar width
+$collection-avatar-width:      8rem !default;
+// @prop Avatar height
+$collection-avatar-height:     $collection-avatar-width !default;
+// @prop button width
+$collection-btn-width:         10rem !default;
+// @prop button width
+$collection-btn-height:        3.8rem !default;
+

@@ -194,17 +194,16 @@
 // @param $size - button size
 // @param $variant - button variant
 // Usage:
-// btn(
-//   $size: (0, 2.5rem, 1.6rem, 3.8rem, .4rem),
-//   $variant: (#fff, $primary, $primary));
+// button(
+//   $size: (fs-15, line-height-38),
+//   $variant: (text-success, border-success)
+// );
 // ----------------------------------
 @mixin button($size: null, $variant: null) {
   @extend %btn-base;
 
   @include atoms($size...);
   @include variant($variant...);
-
-  cursor: pointer;
 }
 
 

@@ -12,7 +12,7 @@
 // Container
 .container {
   @include flex-box(d-flex);
-  @include sizing(c-maxw-lg);;
+  @include sizing(c-maxw-lg);
   @include spacing(mt-6, mx-4);
 }
 
@@ -24,7 +24,7 @@
 // Main top
 .main-top {
   @include flex-box(d-flex, justify-content-between, align-items-center);
-  margin-bottom: 3.5rem;
+  @include spacing(pb-2, mb-6);
 }
 
 // Collection meta
@@ -34,151 +34,145 @@
 
 .collection-meta__avatar {
   @include display(d-inline-block);
-  @include sizing-custom(8rem, 8rem);
-
-  min-width: 8rem;
+  @include sizing-custom($collection-avatar-width, $collection-avatar-height);
 }
 
 .collection-meta__cover {
   @include sizing(wh-100);
-
-  border: .1rem solid #ddd;
-  border-radius: 10%;
+  @include border(border-1, solid, rounded-sm);
+  @include variant(border-gray-light);
 }
 
 .collection-meta__info {
-  margin-left: 2rem;
+  @include spacing(ml-4);
 }
 
 .collection-meta__name {
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: #333;
-  cursor: pointer;
+  @include atoms(
+    font-weight-700,
+    cursor-pointer
+  );
+  @include font-size(fs-21);
+  @include variant(text-gray-dark);
 }
 
 .collection-meta__meta {
-  margin-top: 1rem;
   @include font-size(h5);
-  color: #969696;
+  @include variant(text-gray);
 }
 
 // Button group
 .btn-group {
-  display: flex;
+  @include flex-box(d-flex);
 }
 
 .btn-group__contribute {
-  width: 9rem;
-  font-size: 1.5rem;
-  border: 1px solid rgba(59,194,29,.7);
-  color: #42c02e!important;
-  border-radius: 4rem;
+  @include button(
+    $size: (fs-15, line-height-38),
+    $variant: (text-success, border-success)
+  );
+  @include border(border-1, solid, rounded-lg);
+  @include sizing-custom($collection-btn-width, $collection-btn-height);
 }
 
 .btn-group__follow {
-  padding: 0 .7rem 0 .5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background-color: #00bb29;
-  border-radius: 4rem;
-  width: 10rem;
-  margin-left: 0;
+  @include button(
+    $size: (px-1, fs-15, line-height-38),
+    $variant: (text-white, bg-success)
+  );
+  @include atoms(rounded-lg);
+  @include spacing(ml-4);
+  @include sizing-custom($collection-btn-width, $collection-btn-height);
 }
 
-
-
+// Aside
 .aside {
-  @include grid(col-md-8);
-  // flex: 1;
-  margin-left: 4%;
+  @include grid(col-md-8, col-md-offset-1);
+}
 
-  .title {
-    margin-bottom: 1rem;
-    @include font-size(h5);
-    color: #969696;
-  }
+.aside__title {
+  @include spacing(mb-2);
+  @include font-size(h5);
+  @include variant(text-gray);
+}
 
-  .description {
-    margin-bottom: 20px;
-    padding: 0 0 16px;
-    font-size: 14px;
-    border-bottom: 1px solid #f0f0f0;
+// aside section placeholder
+%aside-section {
+  @include spacing(mb-4, pb-4);
+  @include border(border-bottom-1, solid-bottom);
+  @include variant(border-gray-lighter);
+}
 
-    p {
-      margin: 0 0 1rem;
-      color: #333;
-    }
+// Description
+.description {
+  @extend %aside-section;
+  @include font-size(fs-14);
+}
 
-    .open {
-      color: #969696;
-      cursor: pointer;
-    }
-  }
+.description__open {
+  @include variant(text-gray);
+}
 
-  .share-group {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: .1rem solid #f0f0f0;
-    line-height: 3rem;
+// Share group
+.share-group {
+  @extend %aside-section;
+  @include atoms(line-height-30);
+}
 
-    span {
-      @include font-size(h5);
-      vertical-align: middle;
-    }
+.share-group__title {
+  @include align(align-middle);
+  @include font-size(fs-14);
+}
 
-    a {
-      margin-left: 1rem;
-      color: #333;
-      cursor: pointer;
-    }
+.share-group__item {
+  @include spacing(ml-2);
+  @include variant(text-gray-dark);
+  @include atoms(cursor-pointer);
+}
 
-    i {
-      font-size: 2.2rem;
-      vertical-align: middle;
-    }
-  }
+.share-group__icon {
+  @include font-size(fs-22);
+  @include align(align-middle);
+}
 
-  .collection-editor {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: .1rem solid #f0f0f0;
-  }
+// Collection-editor
+.collection-editor {
+  @extend %aside-section;
+}
 
-  .collection-follower {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: .1rem solid #f0f0f0;
+// Collection follower
+.collection-follower {
+  @extend %aside-section;
 
-    li {
-      margin: 0 -0.8rem;
+  @include flex-box(d-flex, align-items-center);
+  @include sizing-custom($height: 5rem);
+}
 
-      .avatar {
-        display: block;
-        width: 3.2rem;
-        height: 3.2rem;
-        cursor: pointer;
-      }
+.collection-follower__item {
+  @include spacing(-mx-1);
+}
 
-      img {
-        @extend %radius-img;
-        border: .3rem solid #fff;
-      }
+%collection-follower__avatar {
+  @include atoms(cursor-pointer);
+  @include display(d-block);
+  @include sizing-custom(3.2rem, 3.2rem);
+}
 
-      .others {
-        margin-left: .3rem;
-        border: .3rem solid #fff;
-        border-radius: 50%;
-        background-color: #f0f0f0;
-        color: #999;
-        text-align: center;
-        line-height: 2;
-      }
-    }
-  }
+.collection-follower__avatar {
+  @extend %collection-follower__avatar;
+}
 
+.collection-follower__img {
+  @include sizing(wh-100);
+  @include border(border-3, solid, rounded-circle);
+  @include variant(border-white);
+}
 
+.collection-follower__others {
+  @extend %collection-follower__avatar;
+
+  @include atoms(line-height-28);
+  @include text(text-center);
+  @include border(border-3, solid, rounded-circle);
+  @include variant(text-gray, bg-gray-lighter, border-white);
 }

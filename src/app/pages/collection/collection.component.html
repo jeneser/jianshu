@@ -28,9 +28,10 @@
       <app-thumbnail></app-thumbnail>
       <app-placeholder></app-placeholder>
     </div>
-    <!-- Right -->
+    <!-- Aside -->
     <div class="aside">
-      <p class="title">专题公告</p>
+      <p class="aside__title">专题公告</p>
+      <!-- Description -->
       <div class="description">
         <p></p><p>借一斑略知全豹 ，以一目尽传精神。</p>
         <p>阅读简书最好看的故事，欢迎订阅官方公众号：茶点故事（jianshu_teahouse）</p>
@@ -40,24 +41,25 @@
         <br>3.字数要求：两千字以上，两万字以下。
         <br>4.文章排版整洁，段落分明，无明显错别字。
         <br>5.文章中（包括开头，结尾处）不得出现个人推广性质的额外链接，例如微信号，微博之类。另外，插入图片须谨慎，与内容无关的图片请勿添...</p><p></p>
-        <a class="open" data-action="toggle-description" href="javascript:void(null);">
-        展开描述 <i class="iconfont ic-show"></i>
+        <a class="description__open" href="javascript:void(null);">
+          展开描述 <i class="iconfont ic-show"></i>
         </a>
       </div>
       <!-- Share group -->
       <div class="share-group">
-        <span>分享到</span>
-        <a class="">
-          <i class="iconfont ic-share-weibo"></i>
+        <span class="share-group__title">分享到</span>
+        <a class="share-group__item">
+          <i class="share-group__icon iconfont ic-share-weibo"></i>
         </a>
-        <a class="">
-          <i class="iconfont ic-share-wechat"></i>
+        <a class="share-group__item">
+          <i class="share-group__icon iconfont ic-share-wechat"></i>
         </a>
-        <a class="">
-          <i class="iconfont ic-share-more"></i>
+        <a class="share-group__item">
+          <i class="share-group__icon iconfont ic-share-more"></i>
         </a>
       </div>
-      <p class="title">管理员</p>
+      <p class="aside__title">管理员</p>
+      <!-- Collection-editor -->
       <div class="collection-editor">
         <app-avatar>
           <a class="avatar" routerLink="/" target="_blank">
@@ -74,25 +76,26 @@
         <app-avatar></app-avatar>
         <app-avatar></app-avatar>
       </div>
-      <p class="title">关注的人(1048662)</p>
+      <p class="aside__title">关注的人(1048662)</p>
+      <!-- Collection follower -->
       <ul class="collection-follower">
-        <li>
-          <a href="javascript:void(0)" class="avatar">
-            <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+        <li class="collection-follower__item">
+          <a href="javascript:void(0)" class="collection-follower__avatar">
+            <img class="collection-follower__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
           </a>
         </li>
-        <li>
-          <a href="javascript:void(0)" class="avatar">
-            <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+        <li class="collection-follower__item">
+          <a href="javascript:void(0)" class="collection-follower__avatar">
+            <img class="collection-follower__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
           </a>
         </li>
-        <li>
-          <a href="javascript:void(0)" class="avatar">
-            <img src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
+        <li class="collection-follower__item">
+          <a href="javascript:void(0)" class="collection-follower__avatar">
+            <img class="collection-follower__img" src="http://upload.jianshu.io/users/upload_avatars/35363/aa084b453e07?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144">
           </a>
         </li>
-        <li>
-          <a href="javascript:void(0)" class="avatar others">
+        <li class="collection-follower__item">
+          <a href="javascript:void(0)" class="collection-follower__others">
             <i class="iconfont ic-others"></i>
           </a>
         </li>
