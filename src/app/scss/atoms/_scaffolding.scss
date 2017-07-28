@@ -8,14 +8,9 @@
   border-top: .1rem solid $gray-light;
 }
 
-// Img
-%responsive-img {
+%radius-img {
   width: 100%;
   height: 100%;
-}
-
-%radius-img {
-  @extend %responsive-img;
   border-radius: 50%;
 }
 

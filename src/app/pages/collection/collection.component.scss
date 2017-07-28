@@ -2,94 +2,95 @@
 // ----------------------------------
 @import "../../scss/utilities/index";
 
-// Rules
-// ----------------------------------
 
+// Collectin
 .collection {
-  display: flex;
-  justify-content: center;
-  min-width: $nav-bar-min-width;
-
+  @include flex-box(d-flex, justify-content-center);
+  @include sizing(b-minw-lg);
 }
 
+// Container
 .container {
-  display: flex;
-  margin: 0 2rem;
-  @include sizing(maxw-md);;
-  margin-top: 3rem;
+  @include flex-box(d-flex);
+  @include sizing(c-maxw-lg);;
+  @include spacing(mt-6, mx-4);
 }
 
+// Main
 .main {
-  flex: 2;
-
-  .main-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3.5rem;
-
-    .meta {
-      display: flex;
-      align-items: center;
-
-      .info {
-        margin-left: 2rem;
-
-        .name {
-          font-size: 2.1rem;
-          font-weight: 700;
-          color: #333;
-          cursor: pointer;
-        }
-
-        p {
-          margin-top: 1rem;
-          @include font-size(h5);
-          color: #969696;
-        }
-      }
-    }
-
-    .btn-group {
-      display: flex;
-
-      .btn-contribute {
-        width: 9rem;
-        font-size: 1.5rem;
-        border: 1px solid rgba(59,194,29,.7);
-        color: #42c02e!important;
-        border-radius: 4rem;
-      }
-
-      .follow {
-        padding: 0 .7rem 0 .5rem;
-        font-size: 1.5rem;
-        color: #fff;
-        background-color: #00bb29;
-        border-radius: 4rem;
-        width: 10rem;
-        margin-left: 0;
-      }
-
-    }
-
-    .avatar-collection {
-      display: inline-block;
-      width: 8rem;
-      height: 8rem;
-      min-width: 8rem;
-
-      img {
-        @extend %responsive-img;
-        border: .1rem solid #ddd;
-        border-radius: 10%;
-      }
-    }
-  }
+  @include grid(col-md-16);
 }
+
+// Main top
+.main-top {
+  @include flex-box(d-flex, justify-content-between, align-items-center);
+  margin-bottom: 3.5rem;
+}
+
+// Collection meta
+.collection-meta {
+  @include flex-box(d-flex, align-items-center);
+}
+
+.collection-meta__avatar {
+  @include display(d-inline-block);
+  @include sizing-custom(8rem, 8rem);
+
+  min-width: 8rem;
+}
+
+.collection-meta__cover {
+  @include sizing(wh-100);
+
+  border: .1rem solid #ddd;
+  border-radius: 10%;
+}
+
+.collection-meta__info {
+  margin-left: 2rem;
+}
+
+.collection-meta__name {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+}
+
+.collection-meta__meta {
+  margin-top: 1rem;
+  @include font-size(h5);
+  color: #969696;
+}
+
+// Button group
+.btn-group {
+  display: flex;
+}
+
+.btn-group__contribute {
+  width: 9rem;
+  font-size: 1.5rem;
+  border: 1px solid rgba(59,194,29,.7);
+  color: #42c02e!important;
+  border-radius: 4rem;
+}
+
+.btn-group__follow {
+  padding: 0 .7rem 0 .5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #00bb29;
+  border-radius: 4rem;
+  width: 10rem;
+  margin-left: 0;
+}
+
+
 
 .aside {
-  flex: 1;
+  @include grid(col-md-8);
+  // flex: 1;
   margin-left: 4%;
 
   .title {

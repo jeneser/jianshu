@@ -112,7 +112,7 @@ $sizes: (
 
 // $Container max widths
 // ----------------------------------
-$container-max-widths: (
+$container-widths: (
   sm: 54rem,
   md: 72rem,
   lg: 96rem,
@@ -173,12 +173,12 @@ $p-font-weight:                400 !default;
 
 
 // Pages
-// Dir: src/app/pages
+// src/app/pages
 // --------------------------------------------------
 
 
 // $Note
-// Dir: src/app/pages/note
+// src/app/pages/note
 // ----------------------------------
 
 // @prop Post content width

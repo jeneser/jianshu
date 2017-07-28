@@ -15,7 +15,7 @@
 .container {
   display: flex;
   margin: 0 2rem;
-  @include sizing(maxw-md);;
+  @include sizing(c-maxw-md);;
   margin-top: 3rem;
 }
 
@@ -120,7 +120,7 @@
       min-width: 8rem;
 
       img {
-        @extend %responsive-img;
+        @include sizing(wh-100);
         border: .1rem solid #ddd;
         border-radius: 50%;
       }

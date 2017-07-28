@@ -9,13 +9,13 @@
     d-flex,
     justify-content-center
   );
-  @include sizing(minw-md);
+  @include sizing(c-minw-md);
 }
 
 // Index
 .index {
   @include flex-box(d-flex);
-  @include sizing(maxw-lg);
+  @include sizing(c-maxw-lg);
   @include spacing(py-4, my-4);
 }
 

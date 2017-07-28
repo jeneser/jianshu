@@ -15,7 +15,7 @@
 .container {
   display: flex;
   margin: 0 2rem;
-  @include sizing(maxw-md);;
+  @include sizing(c-maxw-md);
   margin-top: 3rem;
 }
 
