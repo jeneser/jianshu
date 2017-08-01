@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Recommendation routing
 import { RecommendationRoutingModule } from './recommendation-routing.module';
+// Shared module
+import { SharedModule } from '../../shared/shared.module';
+
+// Components
 import { RecommendationComponent } from './recommendation.component';
-import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
-import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
-import { AvatarComponent } from '../../components/avatar/avatar.component';
 import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     RecommendationRoutingModule
   ],
   declarations: [
     RecommendationComponent,
-    ThumbnailComponent,
-    PlaceholderComponent,
-    AvatarComponent,
     CollectionComponent
   ]
 })

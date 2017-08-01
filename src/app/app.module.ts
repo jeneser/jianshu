@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 
 // App routing
 import { AppRoutingModule } from './app-routing.module';
-// Top level component
-import { AppComponent } from './app.component';
 // Features module
 import { PagesModule } from './pages/pages.module';
+
+// Top level component
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
