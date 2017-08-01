@@ -1,15 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CarouselComponent } from '../../components/carousel/carousel.component';
-import { CollectionComponent } from '../../components/collection/collection.component';
-import { BoardComponent } from '../../components/board/board.component';
-import { DownloadAppComponent } from '../../components/download-app/download-app.component';
-import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
-import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
-import { AvatarComponent } from '../../components/avatar/avatar.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { SideToolComponent } from '../../components/side-tool/side-tool.component';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

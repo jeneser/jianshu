@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Collection routing
 import { CollectionRoutingModule } from './collection-routing.module';
+// Shared module
+import { SharedModule } from '../../shared/shared.module';
+
+// Components
 import { CollectionComponent } from './collection.component';
-import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
-import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
-import { AvatarComponent } from '../../components/avatar/avatar.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     CollectionRoutingModule
   ],
   declarations: [
-    CollectionComponent,
-    ThumbnailComponent,
-    PlaceholderComponent,
-    AvatarComponent
+    CollectionComponent
   ]
 })
 export class CollectionModule { }

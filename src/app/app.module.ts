@@ -5,11 +5,11 @@ import { HttpModule } from '@angular/http';
 
 // App routing
 import { AppRoutingModule } from './app-routing.module';
-// Top level component
-import { AppComponent } from './app.component';
 // Features module
 import { PagesModule } from './pages/pages.module';
-import { SharedModule } from './shared/shared.module';
+
+// Top level component
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     HttpModule,
     PagesModule,
-    SharedModule,
     AppRoutingModule
   ],
   providers: [],

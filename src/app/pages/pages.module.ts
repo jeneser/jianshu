@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Pages routing
 import { PagesRoutingModule } from './pages-routing.module';
+// Shared module
+import { SharedModule } from '../shared/shared.module';
 
+// Components
 import { PagesComponent } from './pages.component';
-import { NavBarComponent } from '../components/nav-bar/nav-bar.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     PagesRoutingModule
   ],
   declarations: [
-    PagesComponent,
-    NavBarComponent
+    PagesComponent
   ]
 })
 export class PagesModule { }

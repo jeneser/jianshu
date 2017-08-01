@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// User routing
 import { UserRoutingModule } from './user-routing.module';
+// Shared module
+import { SharedModule } from '../../shared/shared.module';
+
+// Components
 import { UserComponent } from './user.component';
-import { ThumbnailComponent } from '../../components/thumbnail/thumbnail.component';
-import { PlaceholderComponent } from '../../components/placeholder/placeholder.component';
-import { AvatarComponent } from '../../components/avatar/avatar.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     UserRoutingModule
   ],
   declarations: [
-    UserComponent,
-    ThumbnailComponent,
-    PlaceholderComponent,
-    AvatarComponent
+    UserComponent
   ]
 })
 export class UserModule { }
