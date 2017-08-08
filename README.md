@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="120px" height="120px" src="logo.png">
+	<img width="100px" height="100px" src="logo.png">
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 	<br><br>
 	<strong>......</strong>
 	<br>
-	<strong><a href="">Live Demo</a></strong>
+	<strong><a href="https://jeneser.github.io/jianshu">Live Demo</a></strong>
 </p>
 <br>
 
