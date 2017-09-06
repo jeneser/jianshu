@@ -1,3 +1,5 @@
+:exclamation: **Pause development, come back soon...**
+
 <p align="center">
 	<img width="100px" height="100px" src="logo.png">
 </p>
